@@ -1,0 +1,291 @@
+/*==========  Desktop First Method  ==========*/
+
+@media only screen and (max-width : 1200px)
+	.header
+		.top-section
+			.logo
+				margin-left: 30px
+
+			.btn-menu
+				width: 210px
+	.team
+		.title
+			background-position: -300px 0
+			.border
+				left: 5%
+				right: 5%
+
+	.portfolio
+		overflow: hidden
+
+		.items
+			.item
+				width: 25%
+				padding-bottom: 25%
+
+				&:last-child
+					display: none
+
+@media only screen and (max-width : 992px)
+	.team
+		.title
+			background-position: -500px 0
+
+@media only screen and (max-width : 768px)
+	.header
+		background-position: 0 65px
+		
+		.top-section
+			height: 65px
+			line-height: 65px
+			
+			.logo
+				margin-left: 10px
+
+			.btn-menu
+				width: 60px
+				background: transparent
+				color: #000
+				text-align: center
+
+				&:hover
+					background: #111
+
+					& .sandwich
+						background: #fff
+
+					& .sandwich::before
+						background: #fff
+
+					& .sandwich::after
+						background: #fff
+
+
+				.sandwich + span
+					display: none
+
+				.sandwich
+					background: #000
+					margin: 0
+
+					&::before, &:after
+						background: #000
+			
+			.social
+				display: none
+
+		.content
+			margin-top: -50px
+
+			h3
+				width: 480px
+				font-size: 20px
+
+				&::before, &::after
+					width: 130px
+
+			h1
+				font-size: 58px
+
+			.button
+				top: 50px
+				width: 150px
+				height: 40px
+				line-height: 40px
+				font-size: 18px
+
+		.bottom-arrow
+			bottom: 20px
+
+	.team
+		.team-items
+
+			.item
+				overflow: hidden
+
+				.photo, & .text
+					width: 100%
+				
+				&:nth-child(2n+1)
+					.photo
+						float: none
+
+						&::before
+							right: 20px
+							border-right: 2px solid #fff
+
+							top: 0
+							border-top: none
+
+						&::after
+							left: 0
+							bottom: auto
+							border-left: 45px solid transparent
+							border-top: 45px solid #fff
+							border-right: 45px solid transparent
+
+					.text
+						float: none
+
+						&::before
+							left: 20px
+							border-left: 2px solid #000
+
+							bottom: 0
+							border-bottom: none
+
+				&:nth-child(2n)
+
+					.photo
+						float: none
+
+						&::before
+							left: 20px
+							border-left: 2px solid #fff
+
+							top: 0
+							border-top: none
+
+						&::after
+							right: 0
+							bottom: auto
+							border-left: 45px solid transparent
+							border-top: 45px solid #fff
+							border-right: 45px solid transparent
+							
+					.text
+						float: none
+
+						&::before
+							right: 20px
+							border-right: 2px solid #000
+
+							bottom: 0
+							border-bottom: none
+
+	.portfolio
+		.items
+			.item
+				width: 33.3333%
+				padding-bottom: 33.3333%
+					
+				a
+					.htext
+						background-position: center center
+
+						span
+							display: none
+					
+				&:last-child
+					display: block
+
+	.brands
+		.brands-items
+			.row
+				.box-items
+					.item
+						width: 33.3333%
+						padding-bottom: 33.3333%
+
+						&:nth-child(1), &:nth-child(2), &:nth-child(6), &:nth-child(7), 
+							display: none
+	
+	.footer
+		.top-section
+			.items
+				padding:
+					bottom: 25px
+							
+				.item
+					width: 50%
+					margin: 0 
+
+@media only screen and (max-width : 480px)
+	.header
+		.content
+			margin-top: -50px
+
+			h3
+				width: 290px
+				font-size: 18px
+
+				&::before, &::after
+					width: 90px
+
+				&::before
+					left: 0
+
+				&::after
+					right: 0
+
+			h1
+				font-size: 38px
+
+			.button
+				top: 50px
+				width: 150px
+				height: 40px
+				line-height: 40px
+				font-size: 18px
+
+		.bottom-arrow
+			bottom: 20px
+
+	.team
+		.title
+			h3
+				width: 180px
+
+				&::before, &::after
+					width: 35px
+
+			h1
+				font-size: 38px
+
+	.portfolio
+		.title
+			h3
+				width: 190px
+				font-size: 14px
+
+				&::before, &::after
+					width: 5px
+
+			h1
+				font-size: 33px
+	
+@media only screen and (max-width : 320px)
+	.team
+		.team-items
+			.item
+				.text
+					p
+						width: 300px
+
+	.portfolio
+		.items
+			.item
+				width: 50%
+				padding-bottom: 50%
+					
+				&:last-child
+					display: none
+
+
+/*==========  Mobile First Method  ==========*/
+
+@media only screen and (min-width : 320px)
+	/**/
+
+
+@media only screen and (min-width : 480px)
+	/**/
+
+@media only screen and (min-width : 768px)
+	/**/
+
+@media only screen and (min-width : 992px)
+	/**/
+
+@media only screen and (min-width : 1200px)
+	/**/
