@@ -613,6 +613,10 @@ body.active-mob-menu .menu {
   padding-top: 30px;
 }
 
+.box-5 .contact {
+  width: 50%;
+}
+
 .box-5 .contact ul li {
   position: relative;
   margin-top: 10px;
@@ -708,7 +712,7 @@ body.active-mob-menu .menu {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: -1;
+  z-index: 1;
 }
 
 .box-5 #map {
