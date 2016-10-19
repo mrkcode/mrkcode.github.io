@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+
+	<title>Company Name</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	
+	<script>
+		localStorage.fontsStyleCache = '';
+
+		(function(){
+			var style = document.createElement('style');
+	        style.rel = 'stylesheet';
+
+	        document.getElementsByTagName('head')[0].appendChild(style);
+	        
+	        if (localStorage.fontsStyleCache) {
+	        	style.textContent = localStorage.fontsStyleCache;
+	        } else {
+	            var request = new XMLHttpRequest();
+
+	            request.open('GET', 'css/fonts.css.embed', true);
+
+	            request.onreadystatechange = function() {
+	                if (request.status >= 200 && request.status < 400) {
+	                    style.textContent = localStorage.fontsStyleCache = request.responseText;
+	                }
+	            }
+	          	
+	            request.send();
+	        }
+		})();
+	</script>
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="css/ie-main.css">
+		<script src=js/"ie-compiled.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	
+	<header class="header">
+		<div class="top-section">
+			<div class="container">
+				<div class="logo">Company <span>Name</span></div>
+
+				<nav class="menu">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Pricing</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+
+					<div class="mob-overlay">
+						<div class="close"></div>
+					</div>
+				</nav>
+
+				<div class="btn-mobile">Menu</div>
+			</div>
+		</div>
+
+		<div class="content">
+			<div class="box">
+				<h1>
+					<span>We are specialist in</span><br>
+					Responsive designs, Stationary
+					And wordpress Themes
+				</h1>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+				<a href="#" class="button">Button Name</a>
+			</div>
+		</div>
+	</header>
+
+	<section class="box-1">
+		<h2>Lorem Ipsum is simply dummy text of the printing</h2>
+
+		<div class="box-1-items">
+			<div class="item protect">
+				<div class="icon"></div>
+				<h3>PROTECT</h3>
+				<p>100% of customer funds are stored offline in secure cold storage. We offer two­ factor authentication on all accounts, mobile alerts and delayed withdrawals, and spending and transfer limits.</p>
+			</div>
+
+			<div class="item alert">
+				<div class="icon"></div>
+				<h3>Alert</h3>
+				<p>100% of customer funds are stored offline in secure cold storage. We offer two­ factor authentication on all accounts, mobile alerts and delayed withdrawals, and spending and transfer limits.</p>
+			</div>
+
+			<div class="item detect">
+				<div class="icon"></div>
+				<h3>Detect</h3>
+				<p>100% of customer funds are stored offline in secure cold storage. We offer two­ factor authentication on all accounts, mobile alerts and delayed withdrawals, and spending and transfer limits.</p>
+			</div>
+		</div>
+	</section>
+	
+	<section class="box-2">
+		<div class="container">
+			<div class="inner">
+				<h2>
+					Lorem Ipsum is simply dummy text of the printing 
+					and typesetting industry. Lorem Ipsum has been....
+				</h2>
+
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+				<ul>
+					<li>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+					</li>
+					<li class="blue">
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+					</li>
+					<li>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="box-3">
+		<h2>We have a very flexible offers for you to choose</h2>	
+
+		<div class="box-3-items">
+			<div class="item blue">
+				<h3>Standard</h3>
+				<h4>iconic graphics</h4>
+				<div class="price">
+					<span>$</span><span>10</span><span>Monthly</span>
+				</div>
+				<ul>
+					<li>Unmetered Traffic</li>
+					<li>Unlimited Domain</li>
+					<li>Unlimited Databases</li>
+					<li>Unlimited e-Mails</li>
+				</ul>
+				<a href="#" class="button">Enroll Today</a>
+			</div>
+			<div class="item orange">
+				<h3>Best Value</h3>
+				<h4>iconic graphics</h4>
+				<div class="price">
+					<span>$</span><span>25</span><span>Monthly</span>
+				</div>
+				<ul>
+					<li>PHP, PERL, ASP, JSP</li>
+					<li>SEMI DEDICATED</li>
+					<li>Staging or Production</li>
+					<li>Unlimited e-Mails</li>
+				</ul>
+				<a href="#" class="button">Enroll Today</a>
+			</div>
+
+			<div class="item green">
+				<h3>Ultimate</h3>
+				<h4>iconic graphics</h4>
+				<div class="price">
+					<span>$</span><span>35</span><span>Monthly</span>
+				</div>
+				<ul>
+					<li>Semi Dedicated</li>
+					<li>1TB Storage</li>
+					<li>Faster Site, Better SEO</li>
+					<li>Unlimited e-Mails</li>
+				</ul>
+				<a href="#" class="button">Enroll Today</a>
+			</div>
+		</div>
+	</section>
+	
+	<div class="box-4">
+		<h2><span>What</span> Client Says</h2>
+		
+		<div class="container">
+			<div class="box-4-items">
+				<div class="item">
+					<div class="photo">
+						<img src="img/customers/1.jpg" alt="">
+					</div>
+					
+					<div class="text">
+						<div class="inner-box">
+							<div class="title">- Staciya Trollie <span>Customer</span></div>
+							<p>Lorem Ipsum is simply dummy text of the printing
+							and industry. Lorem Ipsum has been the industry.</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="photo">
+						<img src="img/customers/2.jpg" alt="">
+					</div>
+					
+					<div class="text">
+						<div class="inner-box">
+							<div class="title">- David Soul <span>Customer</span></div>
+							<p>Lorem Ipsum is simply dummy text of the printing
+							and industry. Lorem Ipsum has been the industry.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="box-5">
+		<div class="container">
+			<div class="contact">
+				<ul>
+					<li class="address">
+						Iconic Graphics<br>
+						123 Main Street<br>
+						EastWest<br>
+						LHR 54500
+					</li>
+					<li class="phone"><a href="tel:0123456789">012.345.6789</a></li>
+					<li class="mail"><a href="mailto:info@admin.com">info@admin.com</a></li>
+				</ul>
+			</div>
+			<div class="social">
+				<ul>
+					<li><a href="#" class="in"></a></li>
+					<li><a href="#" class="tw"></a></li>
+					<li><a href="#" class="fc"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="map-box">
+			<div id="map"></div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="copyright">Copyright © 2014 <strong>Company Name</strong>. All rights reserved.</div>
+	</footer>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcd6GCz8opAUWNlOD6ZEmQME4nEdG6cFw&callback=initMap" async defer></script>
+	<script>
+      function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          disableDefaultUI: true,
+          zoom: 8
+        });
+      }
+
+    </script>
+
+	<script src="js/compiled.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
