@@ -1,0 +1,375 @@
+/*==========  Desktop First Method  ==========*/
+
+@media only screen and (max-height : 812px)
+	.header
+		.bg-penholder
+			display: none
+
+		.bg-eyeglasses
+			display: none
+
+@media only screen and (max-width : 1200px)
+	.header
+
+		.content
+
+			h1
+				font-size: 26px
+
+			h2
+				font-family: 'Open Sans', sans-serif
+				font-size: 15px
+				color: inherit
+				letter-spacing: 3px
+				line-height: 1
+
+	.about
+
+		.text
+			width: 455px
+			margin-right: 40px
+
+	.what-we-do-items
+
+		.item
+			margin:
+				left: 10px
+				right: 10px
+			&:nth-child(2n)
+				margin-right: 10px
+
+	.steps-items
+		.item
+			margin: 
+				right: 10px
+				left: 10px
+
+		&::before
+			width: 60%
+
+	.our-service-items
+		.item
+			.text
+				margin: 
+					top: 95px
+					left: 30px
+
+			.text + img
+				float: right
+
+			img + .text
+				margin: 
+					left: 50px
+
+@media only screen and (max-width : 992px)
+	.header
+		[class^="bg"]
+			display: none
+
+		.menu
+			position: fixed
+			top: 0
+			left: 0
+			margin: 0
+			width: 100%
+			height: 0
+			z-index: 10
+			overflow: hidden
+			background: rgba(0, 0, 0, 0.8)
+			transition: height 250ms
+
+			ul
+				height: auto
+				margin-top: 140px
+				margin-bottom: 140px
+
+				li
+					float: none
+
+					a
+						display: block
+						line-height: 98px
+						padding: 0 25px
+						margin: 10px
+						font-size: 25px
+						font-family: 'Open Sans Semibold', sans-serif
+						text-decoration: none
+						color: #fff
+						background: rgba(#2b8aff, .9)
+						border: none
+						border-radius: 10px
+						text-align: center
+						transition: background 150ms
+
+						&:hover
+							background: rgba($red, .9)
+							color: #fff
+
+			.mob-overlay
+				height: 100%
+				width: 100%
+				position: absolute
+				top: 0
+				left: 0
+				z-index: -1
+
+				.close
+					position: relative
+					border-radius: 50%
+					border: 2px solid #ddd
+					height: 100px
+					width: 100px
+					margin: 20px auto
+					cursor: pointer
+					transition: border 250ms
+
+					&::before, &::after
+						content: ''
+						position: absolute
+						background: #fff
+						height: 2px
+						width: 80%
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						margin: auto
+						transition: background 250ms
+
+					&::before
+						transform: rotate(45deg)
+
+					&::after
+						transform: rotate(-45deg)
+
+				.close:hover
+					border: 2px solid red
+
+					&::before, &::after
+						background: #f00
+
+		.btn-mobile
+			display: block
+
+	.about
+
+		.text
+			width: 90%
+			margin-right: 0
+			text-align: center
+
+			h2
+				text-align: center
+
+				&::after
+					margin-left: auto
+
+		.image
+			display: none
+
+	.steps-items
+		&::before
+			display: none
+
+	.our-service-items
+		.item
+			height: auto
+			padding-bottom: 20px
+
+			& > img
+				display: none
+
+			.text
+				width: auto
+				margin: 
+					top: 50px
+					left: 20px
+
+			.text + img
+				float: none
+
+			img + .text
+				margin: 
+					left: 20px
+
+	.isotope-items
+		.item
+
+			.htext
+				top: auto
+				right: 0
+				left: 0
+				bottom: 15px
+				
+				h3
+					font-size: 15px
+					text-align: center
+
+				.author
+					font-size: 16px
+					text-align: center
+
+					&::after
+						display: none
+			&::before
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+
+		.item--1-2
+			.htext
+				top: auto
+				right: 0
+				left: 0
+				bottom: 15px
+
+		.item--2-2
+			.htext
+				top: auto
+				right: 0
+				left: 0
+				bottom: 15px
+				
+	.callback
+		padding-bottom: 40px
+
+		form
+			width: 85%
+
+			& input[type="text"], & input[type="email"], textarea
+				box-sizing: border-box
+				float: none
+				width: 100%
+
+			input[type="email"]
+				margin-top: 20px
+
+		.contacts
+			max-width: 300px
+			margin-top: 80px
+			margin-left: 8%
+			display: block
+
+@media only screen and (max-width : 768px)
+	.header
+
+		.btn-mobile
+			margin-right: 80px
+	.stat 368px
+		padding:
+			top: 40px
+
+	.stat-items
+
+		.box-item
+			width: 50%
+
+	.our-work-items
+
+		.item
+			width: 100%
+			height: 0
+			padding-bottom: 100%
+			display: block
+			float: none
+
+			img
+				position: absolute
+				top: 0
+				left: 0
+
+	.lattest-blog-items
+		.item
+			position: relative
+
+			img
+				width: 100%
+				float: none
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 1
+
+			.text
+				width: 100%
+				float: none
+				position: absolute
+				top: 0
+				left: 0
+				background: rgba($red, .8)
+				z-index: 2
+
+	.pricing-table-items
+		.item
+			margin:
+				left: 0
+				right: 0
+
+@media only screen and (max-width : 480px)
+	.header
+		.logo
+			float: none
+			text-align: center
+			margin: 0
+
+		.btn-mobile
+			float: none
+			margin: 50px auto
+
+		.content
+
+			h1
+				font-size: 20px
+				letter-spacing: 1px
+
+			h2
+				font-size: 14px
+				letter-spacing: 1px
+				line-height: 1.4
+
+	.what-we-do-items
+
+		.item
+
+			.icon
+				display: none
+
+			.text
+				margin: 0
+	
+	.stat-items
+
+		.box-item
+			width: 90%
+
+	.isotope-items
+		.item
+			width: 50%
+
+		.item--1-2
+			width: 50%
+
+		.item--2-2
+			width: 50%
+	
+@media only screen and (max-width : 320px)
+	/**/
+
+/*==========  Mobile First Method  ==========*/
+
+@media only screen and (min-width : 320px)
+	/**/
+
+
+@media only screen and (min-width : 480px)
+	/**/
+
+@media only screen and (min-width : 768px)
+	/**/
+
+@media only screen and (min-width : 992px)
+	/**/
+
+@media only screen and (min-width : 1200px)
+	/**/
