@@ -1438,6 +1438,12 @@ body.active-mob-menu .menu {
   box-shadow: 0 0 20px #c8c8c8;
 }
 
+.pricing-table-items .item:hover .button {
+  background: #e84c3d;
+  color: #fff;
+  border-color: #e84c3d;
+}
+
 .callback {
   padding-top: 90px;
   padding-bottom: 80px;

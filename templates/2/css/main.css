@@ -1049,6 +1049,12 @@ table {
   .header .content {
     margin-top: -50px;
   }
+  .header .content span {
+    width: 470px;
+  }
+  .header .content span::before, .header .content span::after {
+    width: 130px;
+  }
   .header .content h3 {
     width: 480px;
     font-size: 20px;
@@ -1157,6 +1163,12 @@ table {
 @media only screen and (max-width: 480px) {
   .header .content {
     margin-top: -50px;
+  }
+  .header .content span {
+    width: 300px;
+  }
+  .header .content span::before, .header .content span::after {
+    width: 50px;
   }
   .header .content h3 {
     width: 290px;
