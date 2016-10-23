@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+
+	<title>Circle progressbar</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="libs/fancyselect/fancySelect.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+	<script>
+		localStorage.fontsStyleCache = '';
+
+		(function(){
+			var style = document.createElement('style');
+	        style.rel = 'stylesheet';
+
+	        document.getElementsByTagName('head')[0].appendChild(style);
+	        
+	        if (localStorage.fontsStyleCache) {
+	        	style.textContent = localStorage.fontsStyleCache;
+	        } else {
+	            var request = new XMLHttpRequest();
+
+	            request.open('GET', 'css/fonts.css.embed', true);
+
+	            request.onreadystatechange = function() {
+	                if (request.status >= 200 && request.status < 400) {
+	                    style.textContent = localStorage.fontsStyleCache = request.responseText;
+	                }
+	            }
+	          	
+	            request.send();
+	        }
+		})();
+	</script>
+	
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="css/ie-main.css">
+		<script src=js/"ie-compiled.js"></script>
+	<![endif]-->
+</head>
+<body>
+	
+	<div class="wrapper">
+		<header class="header">
+			<div class="top-section">
+				<div class="container">
+					<div class="logo">indipixel</div>
+					
+					<div class="contact-us">contact US</div>
+				</div>
+			</div>
+			
+			<div class="container">
+				<div class="content">
+					<h1>
+						We design and build <br> beautiful web &amp; mobile apps
+					</h1>
+					<p>
+						You can design and create, and build the most wonderful place in the world. But it takes people to make the dream a reality. - Walt Disney
+					</p>
+					<a href="#" class="button">Know more</a>
+				</div>
+			</div>
+
+			<div class="mobile">
+				<div class="photo">
+					<img src="img/photo.jpg" alt="">
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+			<div class="lets-talk">
+				<h2>Lets Talk</h2>
+				<form>
+					<input type="text" placeholder="First Name" value="" name="fname">
+					<input type="text" placeholder="Last  Name" value="" name="lname" class="right">
+					<input type="email" placeholder="Email Address" value="" name="email">
+					<select name="s" class="select left">
+						<option value="1">1</option>
+						<option value="2">2</option>
+					</select>
+					<textarea name="message" placeholder="Type your query here"></textarea>
+					<button>send</button>
+				</form>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="contact-mail">
+					<a href="mailto:contact@yourmail.com">contact@yourmail.com</a>
+				</div>
+				<div class="copyright">Copyright &copy; 2016</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/compiled.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
