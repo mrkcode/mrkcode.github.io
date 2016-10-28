@@ -525,23 +525,25 @@
 			}
 
 		// Load styles ----
+			window.addEventListener('load', function() {
+				(function(){
+					var h = document.getElementsByTagName("head")[0];
 
-		(function(){
-			var h = document.getElementsByTagName("head")[0];
+					function loadStyle(hrf, med){
+						var l = document.createElement('link');
 
-			function loadStyle(hrf, med){
-				var l = document.createElement('link');
+						l.rel = 'stylesheet';
+						l.href = hrf;
+						l.media = med || "all";
 
-				l.rel = 'stylesheet';
-				l.href = hrf;
-				l.media = med || "all";
+						h.appendChild(l);
+					}
 
-				h.appendChild(l);
-			}
-
-			loadStyle("css/libs.css");
-			loadStyle("css/main.css");
-		})();
+					loadStyle("css/libs.css");
+					loadStyle("css/main.css");
+				})();
+			});
+		
 	</script>
 	<script src="js/libs.js" defer></script>
 	<script src="js/main.js" defer></script>
