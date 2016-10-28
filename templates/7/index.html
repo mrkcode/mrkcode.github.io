@@ -544,9 +544,9 @@
 
 					h.appendChild(l);
 
-					l.addEventListener('load', function() {
+					setTimeout(function() {
 						l.media = medType;
-					});
+					}, 1000);
 				}
 
 				loadStyle("css/libs.css");
