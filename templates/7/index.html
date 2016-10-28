@@ -532,7 +532,7 @@
 
 		window.addEventListener('load', function() {
 			(function(){
-				var h = document.head;
+				var h = document.getElementsByTagName('html')[0];
 
 				function loadStyle(url){
 					var l = document.createElement('link');
