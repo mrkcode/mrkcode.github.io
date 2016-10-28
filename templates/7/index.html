@@ -530,29 +530,35 @@
 
 		// Load styles ----
 
-		(function(){
-			var h = document.head;
+		window.addEventListener('load', function() {
+			(function(){
+				var h = document.head;
 
-			function loadStyle(url, med){
-				var l = document.createElement('link');
-				var medType = med || 'all';
+				function loadStyle(url, med){
+					var l = document.createElement('link');
+					var medType = med || 'all';
 
-				l.rel = 'stylesheet';
-				l.href = url;
-				l.media = "only x";
+					l.rel = 'stylesheet';
+					l.href = url;
+					l.media = "only x";
 
-				h.appendChild(l);
+					h.appendChild(l);
 
-				
-					l.onload = function(){
-						l.media = medType;
+					if (l.addEventListener) {
+						l.addEventListener('load', function(){
+							l.media = medType;
+						});
+					} else {
+						l.onload = function(){
+							l.media = medType;
+						}
 					}
-				
-			}
+				}
 
-			loadStyle("css/libs.css");
-			loadStyle("css/main.css");
-		})();
+				loadStyle("css/libs.css");
+				loadStyle("css/main.css");
+			})();
+		});
 	</script>
 	<script src="js/libs.js" defer></script>
 	<script src="js/main.js" defer></script>
