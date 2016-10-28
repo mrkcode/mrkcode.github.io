@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Start</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	
+	<script>
+
+		// Load fonts ----
+
+		if (window.localStorage) {
+			localStorage.fontsStyleCache = ''; // Clear cache
+
+			(function(){
+				var style = document.createElement('style');
+		        style.rel = 'stylesheet';
+
+		        document.getElementsByTagName('head')[0].appendChild(style);
+		        
+		        if (localStorage.fontsStyleCache) {
+		        	style.textContent = localStorage.fontsStyleCache;
+		        } else {
+		            var request = new XMLHttpRequest();
+
+		            request.open('GET', 'css/fonts.css.embed', true);
+
+		            request.onreadystatechange = function() {
+		                if (request.status >= 200 && request.status < 400) {
+		                    style.textContent = localStorage.fontsStyleCache = request.responseText;
+		                }
+		            }
+		          	
+		            request.send();
+		        }
+			})();
+		}
+		
+		// hidden preloader ----
+
+			if (window.addEventListener) {
+				window.addEventListener('load', function() {
+					document.getElementById('preloader-bar').className += " is-loaded";
+				});
+			} else {
+				window.onload = function() {
+					document.getElementById('preloader-bar').className += " is-loaded";
+				};
+			}
+
+	</script>
+</head>
+<body>
+
+	<div id="preloader-bar"></div>
+
+	<header class="header" id="home">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-20 col-sm-11 col-sm-offset-9 col-md-9 col-md-offset-11 col-content">
+
+					<nav class="menu">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#specials">Specials</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#menu">Menu</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+
+
+						<div class="mob-overlay">
+							<div class="close"></div>
+						</div>
+					</nav>
+					
+					<a href="#" class="btn-mobile right">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</a>
+
+					<h1>
+						Veggies es bonus vobis,
+						proinde vos postulo essum.
+					</h1>
+
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<section class="info">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-20 col-sm-4 col-sm-offset-2">
+					<img src="img/info/noodle.png" alt="">
+					<h3>Turnip greens</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisc 
+						Pellentesque vel enim a elit viverra elementuma.
+						Aliquam erat volutpat.
+					</p>
+				</div>
+				<div class="col-xs-20 col-sm-4 col-sm-offset-2">
+					<img src="img/info/tea.png" alt="">
+					<h3>Beetroot water</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisc 
+						Pellentesque vel enim a elit viverra elementuma.
+						Aliquam erat volutpat.
+					</p>
+				</div>
+				<div class="col-xs-20 col-sm-4 col-sm-offset-2">
+					<img src="img/info/sweet.png" alt="">
+					<h3>GET SOCIAL</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisc 
+						Pellentesque vel enim a elit viverra elementuma.
+						Aliquam erat volutpat.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="specials" id="specials">
+		<h2>This month specials</h2>
+
+		<div class="specials-items">
+			<div class="container">
+				<div class="row">
+					
+					<div class="item">
+						<div class="cell image">
+							<img src="img/specials/1.jpg" alt="">
+						</div>
+						<div class="cell">
+							<h3>Greens fava</h3>
+							<p>
+								Lorem ipsum dolor sit 
+								Pellentesque vel enim a
+							</p>
+							<div class="price">17$</div>
+						</div>
+						<div class="clearfix hidden-md hidden-lg"></div>
+						<div class="cell image right">
+							<img src="img/specials/2.jpg" alt="">
+						</div>
+						<div class="cell">
+							<h3>Soko radicchio</h3>
+							<p>
+								Lorem ipsum dolor sit 
+								Pellentesque vel enim a
+							</p>
+							<div class="price">7$</div>
+						</div>
+					</div> <!-- end item -->
+					
+					<div class="item">
+						<div class="cell image">
+							<img src="img/specials/3.jpg" alt="">
+						</div>
+						<div class="cell">
+							<h3>Celery quandong</h3>
+							<p>
+								Lorem ipsum dolor sit 
+								Pellentesque vel enim a
+							</p>
+							<div class="price">30$</div>
+						</div>
+						<div class="clearfix hidden-md hidden-lg"></div>
+						<div class="cell image right">
+							<img src="img/specials/4.jpg" alt="">
+						</div>
+						<div class="cell">
+							<h3>Celery quandong</h3>
+							<p>
+								Lorem ipsum dolor sit 
+								Pellentesque vel enim a
+							</p>
+							<div class="price">3$</div>
+						</div>
+					</div> <!-- end item -->
+
+					<div class="item">
+						<div class="cell image">
+							<img src="img/specials/5.jpg" alt="">
+						</div>
+						<div class="cell">
+							<h3>Pea horseradish</h3>
+							<p>
+								Lorem ipsum dolor sit 
+								Pellentesque vel enim a
+							</p>
+							<div class="price">30$</div>
+						</div>
+						<div class="clearfix hidden-md hidden-lg"></div>
+						<div class="cell image right">
+							<img src="img/specials/6.jpg" alt="">
+						</div>
+						<div class="cell">
+							<h3>Yarrow sweet</h3>
+							<p>
+								Lorem ipsum dolor sit 
+								Pellentesque vel enim a
+							</p>
+							<div class="price">3$</div>
+						</div>
+					</div> <!-- end item -->
+
+				</div> <!-- end row -->
+			</div> <!-- end container -->		
+		</div> <!-- end specials-items -->
+
+	</section> <!-- end specials -->
+	
+	<section class="about-us" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-20 col-sm-8 col-sm-offset-1">
+					<h2>About us</h2>
+					<p>
+						Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.
+					</p>
+					<div class="signature"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="menu-present" id="menu">
+		<h2>Menu</h2>
+		<div class="group-buttons js-tab-btn-group">
+			<a href="#starters">Starters</a>
+			<a href="#main-dishes">Main Dishes</a>
+			<a href="#desserts">Desserts</a>
+			<a href="#drinks">Drinks</a>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="tabs-group">
+					<div class="js-tab" id="starters">
+						
+						<div class="col-xs-20 col-md-7 col-md-offset-2">
+							<ul>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTT TERRINE</div>
+										<div class="price">12$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">PAN FRIED COURGETTE FLOWERS</div>
+										<div class="price">19$</div>
+										<div class="small">fresh samphire, plain flour, cornflower, eggs, fennel</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">PAN FRIED COURGETTE FLOWERS</div>
+										<div class="price">13$</div>
+										<div class="small">courgette flowers, goats cheese, red onion, pine nuts</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">17$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SAMPHIRE FRITTERS WITH FENNEL CEVICHE</div>
+										<div class="price">12$</div>
+										<div class="small">courgette flowers, goats cheese, red onion, pine nuts</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">16$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">17$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-xs-20 col-md-7 col-md-offset-2">
+							<ul>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">12$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">19$</div>
+										<div class="small">fresh samphire, plain flour, cornflower, eggs, fennel</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">PAN FRIED COURGETTE FLOWERS</div>
+										<div class="price">13$</div>
+										<div class="small">courgette flowers, goats cheese, red onion, pine nuts</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">17$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">PAN FRIED COURGETTE FLOWERS</div>
+										<div class="price">12$</div>
+										<div class="small">courgette flowers, goats cheese, red onion, pine nuts</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SAMPHIRE FRITTERS WITH FENNEL CEVICHE</div>
+										<div class="price">16$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">17$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+					</div> <!-- end js-tab -->
+
+					<div class="js-tab" id="main-dishes">
+
+						<div class="col-xs-20 col-md-7 col-md-offset-2">
+							<ul>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">12$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SAMPHIRE FRITTERS WITH FENNEL CEVICHE</div>
+										<div class="price">19$</div>
+										<div class="small">fresh samphire, plain flour, cornflower, eggs, fennel</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">PAN FRIED COURGETTE FLOWERS</div>
+										<div class="price">13$</div>
+										<div class="small">courgette flowers, goats cheese, red onion, pine nuts</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">17$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">PAN FRIED COURGETTE FLOWERS</div>
+										<div class="price">12$</div>
+										<div class="small">courgette flowers, goats cheese, red onion, pine nuts</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">16$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">17$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-xs-20 col-md-7 col-md-offset-2">
+							<ul>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">12$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SAMPHIRE FRITTERS WITH FENNEL CEVICHE</div>
+										<div class="price">19$</div>
+										<div class="small">fresh samphire, plain flour, cornflower, eggs, fennel</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">PAN FRIED COURGETTE FLOWERS</div>
+										<div class="price">13$</div>
+										<div class="small">courgette flowers, goats cheese, red onion, pine nuts</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">17$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">PAN FRIED COURGETTE FLOWERS</div>
+										<div class="price">12$</div>
+										<div class="small">courgette flowers, goats cheese, red onion, pine nuts</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">16$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+								<li>
+									<div class="over-text">
+										<div class="name">SMOKED RICOTTA TERRINE</div>
+										<div class="price">17$</div>
+										<div class="small">ricotta, shallots, cheddar, capers</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div> <!-- end js-tab -->
+
+				</div> <!-- end tabs-group -->
+
+			</div> <!-- end row -->
+
+		</div> <!-- End container -->
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-20 col-sm-10 col-sm-offset-10 col-md-7 col-md-offset-11" id="contact">
+					<h2>Contact</h2>
+					<div class="contact left">
+						<h3>Veggie</h3>
+						<p>
+							3428 Magnolia Avenue <br>
+							Hackettstown, NJ 07840
+						</p>
+					</div>
+					<div class="contact right">
+						<h3>Reservations</h3>
+						<p>
+							reservations@vegggie.com<br>
+							+48 202-555-0114
+						</p>
+					</div>
+					<div class="clearfix"></div>
+					<br><br>
+					<h3>Contact Form</h3>
+					<br>
+					<form>
+						<input type="text" name="name" placeholder="Name">
+						<input type="email" name="email" placeholder="Email">
+						<input type="text" name="message" placeholder="Message">
+						<button>Send</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="row bottom">
+				<div class="col-xs-20 col-sm-6 col-sm-push-14 col-md-6 col-md-push-12">
+					<div class="social">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+					</div>
+				</div>
+				<div class="col-xs-20 col-sm-8 col-sm-offset-6 col-sm-pull-6 copyright">
+					Copyright &copy; 2016
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<a href="#home" class="btn-to-top">
+		<i class="fa-arrow-up fa"></i>
+	</a>
+
+	<script>
+		// Load styles ----
+
+		(function(){
+			var h = document.getElementsByTagName("head")[0];
+
+			function loadStyle(hrf, med){
+				var l = document.createElement('link');
+
+				l.rel = 'stylesheet';
+				l.href = hrf;
+				l.media = med || "all";
+
+				h.appendChild(l);
+			}
+
+			loadStyle("css/libs.css");
+			loadStyle("css/main.css");
+		})();
+	</script>
+	<script src="js/libs.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
