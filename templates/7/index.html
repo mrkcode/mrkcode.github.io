@@ -481,69 +481,6 @@
 		<i class="fa-arrow-up fa"></i>
 	</a>
 	
-	<script>
 
-		// Load fonts ----
-
-		if (window.localStorage) {
-			localStorage.fontsStyleCache = ''; // Clear cache
-
-			(function(){
-				var style = document.createElement('style');
-		        style.rel = 'stylesheet';
-
-		        document.getElementsByTagName('head')[0].appendChild(style);
-		        
-		        if (localStorage.fontsStyleCache) {
-		        	style.textContent = localStorage.fontsStyleCache;
-		        } else {
-		            var request = new XMLHttpRequest();
-
-		            request.open('GET', 'css/fonts.css.embed', true);
-
-		            request.onreadystatechange = function() {
-		                if (request.status >= 200 && request.status < 400) {
-		                    style.textContent = localStorage.fontsStyleCache = request.responseText;
-		                }
-		            }
-		          	
-		            request.send();
-		        }
-			})();
-		}
-		
-		// hidden preloader ----
-
-			if (window.addEventListener) {
-				window.addEventListener('load', function() {
-					document.getElementById('preloader-bar').className += " is-loaded";
-				});
-			} else {
-				window.onload = function() {
-					document.getElementById('preloader-bar').className += " is-loaded";
-				};
-			}
-
-		// Load styles ----
-
-		(function(){
-			var h = document.getElementsByTagName("head")[0];
-
-			function loadStyle(hrf, med){
-				var l = document.createElement('link');
-
-				l.rel = 'stylesheet';
-				l.href = hrf;
-				l.media = med || "all";
-
-				h.appendChild(l);
-			}
-
-			loadStyle("css/libs.css");
-			loadStyle("css/main.css");
-		})();
-	</script>
-	<script src="js/libs.js" defer></script>
-	<script src="js/main.js" defer></script>
 </body>
 </html>
