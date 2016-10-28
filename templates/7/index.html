@@ -12,38 +12,6 @@
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	
 	
-	
-	<script>
-
-		// Load fonts ----
-
-		if (window.localStorage) {
-			localStorage.fontsStyleCache = ''; // Clear cache
-
-			(function(){
-				var style = document.createElement('style');
-		        style.rel = 'stylesheet';
-
-		        document.getElementsByTagName('head')[0].appendChild(style);
-		        
-		        if (localStorage.fontsStyleCache) {
-		        	style.textContent = localStorage.fontsStyleCache;
-		        } else {
-		            var request = new XMLHttpRequest();
-
-		            request.open('GET', 'css/fonts.css.embed', true);
-
-		            request.onreadystatechange = function() {
-		                if (request.status >= 200 && request.status < 400) {
-		                    style.textContent = localStorage.fontsStyleCache = request.responseText;
-		                }
-		            }
-		          	
-		            request.send();
-		        }
-			})();
-		}
-	</script>
 </head>
 <body>
 
@@ -514,6 +482,38 @@
 		<i class="fa-arrow-up fa"></i>
 	</a>
 
+	
+	<script>
+
+		// Load fonts ----
+
+		if (window.localStorage) {
+			localStorage.fontsStyleCache = ''; // Clear cache
+
+			(function(){
+				var style = document.createElement('style');
+		        style.rel = 'stylesheet';
+
+		        document.getElementsByTagName('head')[0].appendChild(style);
+		        
+		        if (localStorage.fontsStyleCache) {
+		        	style.textContent = localStorage.fontsStyleCache;
+		        } else {
+		            var request = new XMLHttpRequest();
+
+		            request.open('GET', 'css/fonts.css.embed', true);
+
+		            request.onreadystatechange = function() {
+		                if (request.status >= 200 && request.status < 400) {
+		                    style.textContent = localStorage.fontsStyleCache = request.responseText;
+		                }
+		            }
+		          	
+		            request.send();
+		        }
+			})();
+		}
+	</script>
 	<script>
 		
 		// hidden preloader ----
