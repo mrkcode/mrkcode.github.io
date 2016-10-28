@@ -2154,8 +2154,7 @@ h2 {
   text-align: center;
 }
 
-.footer form input[type="text"],
-.footer form input[type="email"] {
+.footer form input {
   border: none;
   outline: none;
   background: transparent;
@@ -2164,42 +2163,35 @@ h2 {
   width: 44.4444%;
 }
 
-.footer form input[type="text"]::-webkit-input-placeholder,
-.footer form input[type="email"]::-webkit-input-placeholder {
+.footer form input::-webkit-input-placeholder {
   color: #3c3c3c;
   font-family: 'Merriweather Italic', sans-serif;
 }
 
-.footer form input[type="text"]:-moz-placeholder,
-.footer form input[type="email"]:-moz-placeholder {
+.footer form input:-moz-placeholder {
   color: #3c3c3c;
   font-family: 'Merriweather Italic', sans-serif;
 }
 
-.footer form input[type="text"]::-moz-placeholder,
-.footer form input[type="email"]::-moz-placeholder {
+.footer form input::-moz-placeholder {
   color: #3c3c3c;
   font-family: 'Merriweather Italic', sans-serif;
 }
 
-.footer form input[type="text"]:-ms-input-placeholder,
-.footer form input[type="email"]:-ms-input-placeholder {
+.footer form input:-ms-input-placeholder {
   color: #3c3c3c;
   font-family: 'Merriweather Italic', sans-serif;
 }
 
-.footer form input[type="text"][name="name"],
-.footer form input[type="email"][name="name"] {
+.footer form input.name {
   float: left;
 }
 
-.footer form input[type="text"][name="email"],
-.footer form input[type="email"][name="email"] {
+.footer form input.email {
   float: right;
 }
 
-.footer form input[type="text"][name="message"],
-.footer form input[type="email"][name="message"] {
+.footer form input.message {
   width: 100%;
   margin-top: 40px;
 }
