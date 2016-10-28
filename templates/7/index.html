@@ -11,6 +11,8 @@
 
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	
+	<link rel="stylesheet" href="css/head.css">
+	
 	<script>
 
 		// Load fonts ----
@@ -532,23 +534,17 @@
 			(function(){
 				var h = document.head;
 
-				function loadStyle(url, med){
+				function loadStyle(url){
 					var l = document.createElement('link');
-					var medType = med || 'all';
 
 					l.rel = 'stylesheet';
 					l.href = url;
-					l.media = "only x";
 
 					h.appendChild(l);
 
-					setTimeout(function() {
-						l.media = medType;
-					}, 5000);
 				}
 
 				loadStyle("css/libs.css");
-				loadStyle("css/head.css");
 				loadStyle("css/main.css");
 			})();
 		});
