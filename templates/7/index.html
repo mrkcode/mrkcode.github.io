@@ -543,15 +543,6 @@
 
 				h.appendChild(l);
 
-				if (l.addEventListener) {
-					l.addEventListener('load', function(){
-						l.media = medType;
-					});
-				} else {
-					l.onload = function(){
-						l.media = medType;
-					}
-				}
 			}
 
 			loadStyle("css/libs.css");
