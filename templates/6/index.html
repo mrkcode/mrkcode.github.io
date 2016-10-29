@@ -679,14 +679,19 @@
 
 				if (l.addEventListener) {
 					l.addEventListener('load', function(){
-						l.media = medType;
+						setTimeout(function(){
+							l.media = medType;
+						}, 2000);
 					});
 				} else {
 					l.onload = function(){
-						l.media = medType;
+						setTimeout(function(){
+							l.media = medType;
+						}, 2000);
 					}
 				}
 			}
+
 
 			loadStyle("libs/font-awesome/css/font-awesome.min.css");
 			loadStyle("libs/animate.css/animate.css");
