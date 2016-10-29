@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 
@@ -11,13 +8,6 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="libs/animate.css/animate.css">
-	<link rel="stylesheet" href="libs/owl-carousel/owl-carousel/owl.carousel.css">
-	<link rel="stylesheet" href="libs/owl-carousel/owl-carousel/owl.theme.css">
-	<link rel="stylesheet" href="css/animate-custom.css">
-	<link rel="stylesheet" href="css/main.css">
 
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
@@ -47,11 +37,6 @@
 	        }
 		})();
 	</script>
-	
-	<!--[if lt IE 9]>
-		<link rel="stylesheet" href="css/ie-main.css">
-		<script src=js/"ie-compiled.js"></script>
-	<![endif]-->
 </head>
 <body>
 	
@@ -70,8 +55,6 @@
 				<li><a href="#blog">BLOG</a></li>
 				<li><a href="#contact">CONTACT</a></li>
 			</ul>
-
-
 
 			<div class="mob-overlay">
 				<div class="close"></div>
@@ -677,6 +660,43 @@
 		<div class="copyright">&copy; 2016 All Rights Reserved.</div>
 	</footer>
 	
+	<script>
+		
+		// Load styles ----
+
+		(function(){
+			var h = document.head;
+
+			function loadStyle(url, med){
+				var l = document.createElement('link');
+				var medType = med || 'all';
+
+				l.rel = 'stylesheet';
+				l.href = url;
+				l.media = "only x";
+
+				h.appendChild(l);
+
+				if (l.addEventListener) {
+					l.addEventListener('load', function(){
+						l.media = medType;
+					});
+				} else {
+					l.onload = function(){
+						l.media = medType;
+					}
+				}
+			}
+
+			loadStyle("libs/font-awesome/css/font-awesome.min.css");
+			loadStyle("libs/animate.css/animate.css");
+			loadStyle("libs/owl-carousel/owl-carousel/owl.carousel.css");
+			loadStyle("libs/owl-carousel/owl-carousel/owl.theme.css");
+			loadStyle("css/animate-custom.css");
+			loadStyle("css/main.css");
+		})();
+	</script>
+
 	<script src="js/compiled.js"></script>
 	<script src="js/main.js"></script>
 
