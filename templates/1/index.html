@@ -663,19 +663,10 @@ h2, h3 {
 
 				l.rel = 'stylesheet';
 				l.href = url;
-				l.media = "only x";
+				l.media = "all";
 
 				h.appendChild(l);
 
-				if (l.addEventListener) {
-					l.addEventListener('load', function(){
-						l.media = medType;
-					});
-				} else {
-					l.onload = function(){
-						l.media = medType;
-					}
-				}
 			}
 
 			loadStyle("css/main.css");
