@@ -651,20 +651,35 @@ h2, h3 {
 	            request.send();
 	        }
 		})();
-		
+
 		// Load styles ----
 
-		function loadStyle(url, med){
-			var l = document.createElement('link');
+		(function(){
+			var h = document.body;
 
-			l.rel   = 'stylesheet';
-			l.href  = url;
-			l.media = med || 'all';
+			function loadStyle(url, med){
+				var l = document.createElement('link');
+				var medType = med || 'all';
 
-			document.head.appendChild(l);
-		}
+				l.rel = 'stylesheet';
+				l.href = url;
+				l.media = "only x";
 
-		loadStyle('css/main.css');
+				h.appendChild(l);
+
+				if (l.addEventListener) {
+					l.addEventListener('load', function(){
+						l.media = medType;
+					});
+				} else {
+					l.onload = function(){
+						l.media = medType;
+					}
+				}
+			}
+
+			loadStyle("css/main.css");
+		})();
 	</script>
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
