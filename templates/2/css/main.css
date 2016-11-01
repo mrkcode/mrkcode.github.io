@@ -598,7 +598,6 @@
 
 /*==========  Desktop First Method  ==========*/
 @media only screen and (max-width: 1200px) {
-
   .team .title {
     background-position: -300px 0;
   }
@@ -625,7 +624,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-
   .team .team-items .item {
     overflow: hidden;
   }
@@ -712,8 +710,6 @@
 }
 
 @media only screen and (max-width: 480px) {
-
-
   .team .title h3 {
     width: 180px;
   }
