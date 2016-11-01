@@ -459,63 +459,7 @@
 }
 
 /*==========  Desktop First Method  ==========*/
-@media only screen and (max-width: 1200px) {
-  .header .search-tour {
-    height: 545px;
-    margin-top: 15px;
-    margin-right: 15px;
-  }
-  .header .search-tour h2 {
-    font-size: 4em;
-  }
-  .header .top-line .contacts {
-    margin-left: 20px;
-  }
-  .header .menu {
-    margin-right: 20px;
-  }
-  .header .menu ul li {
-    margin-left: 35px;
-  }
-  .header .head-message {
-    margin-top: 140px;
-  }
-  .header .head-message h2 {
-    font-size: 3.2em;
-  }
-  .header .head-message p {
-    font-size: 1.4em;
-  }
-  .header .bottom-line {
-    height: 145px;
-    margin-top: -145px;
-    font-size: 1em;
-  }
-  .header .bottom-line .half {
-    padding: 3em 2em;
-  }
-}
-
 @media only screen and (max-width: 992px) {
-  .header .top-line .social a {
-    margin-right: 30px;
-    font-size: 16px;
-  }
-  .header .menu ul li {
-    margin-left: 25px;
-  }
-  .header .search-tour h2 {
-    font-size: 3em;
-  }
-  .header .head-message {
-    margin-top: 170px;
-  }
-  .header .head-message h2 {
-    font-size: 2.7em;
-  }
-  .header .head-message p {
-    font-size: 1em;
-  }
   .footer .llc {
     padding-left: 10px;
   }
@@ -532,40 +476,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .header .top-line .contacts i, .header .top-line .contacts a {
-    margin-right: 1px;
-  }
-  .header .top-line .contacts a {
-    margin-right: 18px;
-    text-decoration: underline;
-  }
-  .header .top-line .search #search-input:focus {
-    width: 120px;
-  }
-  .header .top-line .social {
-    display: none;
-  }
-  .header .menu {
-    display: none;
-  }
-  .header .search-tour {
-    width: 80%;
-    float: none;
-    margin: 20px auto;
-    overflow: hidden;
-  }
-  .header .search-tour h2 {
-    font-size: 3.2em;
-  }
-  .header .search-tour p {
-    font-size: .8em;
-  }
-  .header .head-message {
-    display: none;
-  }
-  .header .bottom-line {
-    display: none;
-  }
   .trips h2 {
     font-size: 30px;
     line-height: 50px;
@@ -607,16 +517,6 @@
 }
 
 @media only screen and (max-width: 480px) {
-  .header .top-line .contacts i, .header .top-line .contacts a {
-    margin-right: 1px;
-  }
-  .header .top-line .contacts a {
-    margin-right: 18px;
-    text-decoration: underline;
-  }
-  .header .top-line .search {
-    display: none;
-  }
   .deals .deal-items .item {
     display: inline-block;
     width: 290px;
@@ -643,12 +543,6 @@
 
 @media only screen and (min-width: 480px) {
   /**/
-}
-
-@media only screen and (min-width: 768px) {
-  .header .top-section .mobile-menu-btn {
-    display: none;
-  }
 }
 
 @media only screen and (min-width: 992px) {
