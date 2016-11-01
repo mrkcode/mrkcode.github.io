@@ -244,7 +244,6 @@ a {
   height: 100%;
   color: #fff;
 }
-
 .menu {
   position: fixed;
   top: 0;
@@ -255,6 +254,8 @@ a {
   z-index: 100;
   background: rgba(0, 0, 0, 0.8);
   opacity: 0;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
   overflow: hidden;
 }
 
@@ -277,10 +278,12 @@ a {
   border: 2px solid #fff;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+  -webkit-transition: border 250ms;
+  transition: border 250ms;
+  cursor: pointer;
 }
 
-.menu .menu-overlay .menu-close::before,
-.menu .menu-overlay .menu-close::after {
+.menu .menu-overlay .menu-close::before, .menu .menu-overlay .menu-close::after {
   content: '';
   position: absolute;
   top: 0;
@@ -291,6 +294,8 @@ a {
   width: 80%;
   height: 2px;
   background: #fff;
+  -webkit-transition: background 250ms;
+  transition: background 250ms;
 }
 
 .menu .menu-overlay .menu-close::before {
@@ -303,6 +308,14 @@ a {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+.menu .menu-overlay .menu-close:hover {
+  border-color: #f23121;
+}
+
+.menu .menu-overlay .menu-close:hover::before, .menu .menu-overlay .menu-close:hover::after {
+  background: #f23121;
 }
 
 .menu .list {
@@ -322,6 +335,12 @@ a {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   color: #fff;
+  -webkit-transition: background 250ms;
+  transition: background 250ms;
+}
+
+.menu .list li a:hover {
+  background: rgba(0, 153, 137, 0.95);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -445,9 +464,6 @@ a {
 
 }
 
-
-
-
 @font-face {
     font-family: 'Quicksand Light';
     src: url('fonts/quicksand-light-webfont.eot');
@@ -459,9 +475,6 @@ a {
 
 }
 
-
-
-
 @font-face {
     font-family: 'Quicksand Regular';
     src: url('fonts/quicksand-regular-webfont.eot');
@@ -472,9 +485,6 @@ a {
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'Dosis Light';
