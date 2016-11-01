@@ -2033,7 +2033,7 @@ h2 {
   margin-bottom: 30px;
 }
 
-.menu-present .group-buttons a {
+.menu-present .group-buttons li {
   display: inline-block;
   font-size: 0.75rem;
   color: #3c3c3c;
@@ -2041,9 +2041,10 @@ h2 {
   padding: 7px 15px;
   -webkit-transition: border 100ms ease;
   transition: border 100ms ease;
+  cursor: pointer;
 }
 
-.menu-present .group-buttons a.active {
+.menu-present .group-buttons li.active {
   border-color: #3c3c3c;
   text-decoration: none;
 }
