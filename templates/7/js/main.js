@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 	// Tabs
 	(function(){
-		$tabbtns = $('.js-tab-btn-group a');
+		$tabbtns = $('.js-tab-btn-group li');
 		$tabs    = $('.js-tab');
 
 		$tabbtns.eq(0).addClass('active');
@@ -20,13 +20,11 @@ $(document).ready(function(){
 			var $tbbtn = $(tabbtn);
 
 			$tbbtn.click(function(e){
-				e.preventDefault();
-
 				$tabbtns.removeClass('active');
 				$tbbtn.addClass('active');
 
 				$tabs.removeClass('active');
-				$(this.hash).addClass('active');
+				$($(this).data("target")).addClass('active');
 			});
 		});
 	})();
