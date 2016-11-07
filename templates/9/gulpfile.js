@@ -3,7 +3,9 @@ var gulp         = require('gulp'),
 	sass         = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	rename       = require('gulp-rename'),
-	cleanCSS     = require('gulp-clean-css');
+	cleanCSS     = require('gulp-clean-css'),
+	imagemin     = require('gulp-imagemin'),
+	pngquant     = require('imagemin-pngquant');
 	/*
 	concat       = require('gulp-concat'),
 	uglify       = require('gulp-uglifyjs'),
@@ -58,6 +60,17 @@ gulp.task('start', ['sass', 'minifyCss', 'browser-sync'], function(){
 	gulp.watch('img/**/*').on('change', browserSync.reload);
 	gulp.watch('*.html').on('change', browserSync.reload);
 })
+
+gulp.task('imagemin', function() {
+	return gulp.src('img/**/*')
+		.pipe(imagemin({
+			interlaced: true,
+			progressive: true,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant()]
+		}))
+		.pipe(gulp.dest('img')); 
+});
 
 /*
 gulp.task('compileJs', function(){
