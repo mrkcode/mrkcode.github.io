@@ -1,11 +1,7 @@
 @import "bourbon"
 @import "vars"
-
-input[type=search]
-	-webkit-appearance: textfield
-	-webkit-box-sizing: content-box
-	font-family: inherit
-	font-size: 100%
+@import "fonts"
+@import "../css/animate-custom"
 
 *::-webkit-input-placeholder 
 	color: #666
@@ -26,9 +22,6 @@ input[type=search]
 body input:required:invalid,
 body textarea:required:invalid
 	box-shadow: none
-
-body input:required:valid,
-body textarea:required:valid 
 
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button

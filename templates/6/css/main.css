@@ -61,6 +61,7 @@
   margin-right: 30px;
   border: 3px solid #ebebeb;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 25px;
   overflow: hidden;
@@ -146,6 +147,7 @@
   min-height: 368px;
   padding-top: 140px;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   overflow: hidden;
   background: rgba(232, 76, 61, 0.9);
@@ -241,6 +243,7 @@
   width: 88px;
   height: 88px;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin-top: 6px;
   -webkit-border-radius: 50%;
@@ -633,6 +636,7 @@
   min-height: 306px;
   background: rgba(232, 76, 61, 0.8);
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -694,6 +698,7 @@
 
 .subscribe .mail-submit input[type="email"] {
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   margin: auto;
@@ -780,6 +785,7 @@
   left: 0;
   height: 50%;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 25px;
   z-index: 1;
@@ -876,6 +882,7 @@
   height: 100%;
   padding-top: 90px;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center;
   color: #fff;
@@ -983,6 +990,7 @@
   width: 50%;
   height: 100%;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 25px;
   float: right;
@@ -1138,6 +1146,7 @@
   padding: 8px 15px;
   font-size: 14px;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #383a3e;
 }
@@ -1348,6 +1357,7 @@
   }
   .callback form input[type="text"], .callback form input[type="email"], .callback form textarea {
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     float: none;
     width: 100%;

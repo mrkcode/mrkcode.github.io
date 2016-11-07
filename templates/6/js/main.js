@@ -7,6 +7,22 @@ $(function(){
 		$('body').removeClass('active-mob-menu');
 	});
 
+	$('a[href*="#"]:not([href="#"])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			  var target = $(this.hash);
+
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
+			  if (target.length) {
+				    $('html, body').animate({
+				      scrollTop: target.offset().top
+				    }, 600);
+
+				    return false;
+			  }
+		}
+	});
+
 	$portfolioItems = $('.isotope-items');
 
 	$portfolioItems.isotope({
@@ -16,7 +32,7 @@ $(function(){
 			sort: '[data-sort]'
 		}
 	});
-
+	
 	$('.isotope-buttons li').click(function(){
 		var $this  = $(this);
 		var filter = $this.data('filter');
