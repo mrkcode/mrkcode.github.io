@@ -1,5 +1,3 @@
-/*==========  Desktop First Method  ==========*/
-
 @media only screen and (max-width : 1200px)
 	.specials-items
 		h3
@@ -9,100 +7,6 @@
 		background-position: -200px 0, top right
 
 @media only screen and (max-width : 992px)
-	.header
-		background-position: -200px 0
-
-		.menu
-			position: fixed
-			top: 0
-			left: 0
-			margin: 0
-			width: 100%
-			height: 0
-			overflow: hidden
-			z-index: 10
-			background: rgba(0, 0, 0, 0.8)
-			transition: height 250ms
-
-			ul
-				height: auto
-				margin-top: 140px
-				margin-bottom: 140px
-
-				li
-					float: none
-
-					a
-						display: block
-						line-height: 98px
-						padding: 0 25px
-						margin: 10px
-						font-size: 25px
-						font-family: 'Open Sans Semibold', sans-serif
-						text-decoration: none
-						color: #fff
-						background: rgba(#2b8aff, .9)
-						border: none
-						border-radius: 10px
-						text-align: center
-						transition: background 150ms
-
-						&:hover
-							background: rgba(#0dd, .9)
-							color: #fff
-
-			.mob-overlay
-				height: 100%
-				width: 100%
-				position: absolute
-				top: 0
-				left: 0
-				z-index: -1
-
-				.close
-					position: relative
-					border-radius: 50%
-					border: 2px solid #ddd
-					height: 100px
-					width: 100px
-					margin: 20px auto
-					cursor: pointer
-					transition: border 250ms
-
-					&::before, &::after
-						content: ''
-						position: absolute
-						background: #fff
-						height: 2px
-						width: 80%
-						top: 0
-						left: 0
-						right: 0
-						bottom: 0
-						margin: auto
-						transition: background 250ms
-
-					&::before
-						transform: rotate(45deg)
-
-					&::after
-						transform: rotate(-45deg)
-
-				.close:hover
-					border: 2px solid red
-
-					&::before, &::after
-						background: #f00
-
-		.btn-mobile
-			display: block
-
-		h1
-			width: 320px
-			font-size: rem(22)
-			left: 50%
-			transform: translate(-50%, -50%)
-
 	.menu-present
 		.tabs-group
 		
@@ -150,15 +54,6 @@
 		background-position: -300px 0, top right
 
 @media only screen and (max-width : 768px)
-	.header
-		background-image: none
-
-		h1
-			width: 320px
-			font-size: rem(22)
-			left: 50%
-			transform: translate(-50%, -50%)
-
 	.about-us
 		.container
 			background-image: none
@@ -185,25 +80,3 @@
 
 			&::after
 				margin: auto
-
-@media only screen and (max-width : 320px)
-	/**/
-
-
-/*==========  Mobile First Method  ==========*/
-
-@media only screen and (min-width : 320px)
-	/**/
-
-
-@media only screen and (min-width : 480px)
-	/**/
-
-@media only screen and (min-width : 768px)
-	/**/
-
-@media only screen and (min-width : 992px)
-	/**/
-
-@media only screen and (min-width : 1200px)
-	/**/

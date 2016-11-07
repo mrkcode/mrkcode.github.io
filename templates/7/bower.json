@@ -1,5 +1,5 @@
 {
-  "name": "Gulp",
+  "name": "Env",
   "description": "",
   "main": "index.js",
   "authors": [
@@ -16,12 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "es5-shim": "^4.5.9",
-    "font-awesome": "^4.6.3",
-    "html5shiv": "^3.7.3",
     "jquery": "2.2.4",
-    "magnific-popup": "^1.1.0",
-    "respond": "^1.4.2",
-    "waypoints": "^4.0.1"
+    "font-awesome": "^4.7.0"
   }
 }
