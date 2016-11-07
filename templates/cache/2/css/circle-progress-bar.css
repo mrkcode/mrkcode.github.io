@@ -1,0 +1,46 @@
+.progress-cb {
+  width: 100%;
+  height: 100%;
+  min-width: 10px;
+  min-height: 10px;
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.progress-cb .hidden {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+}
+
+.progress-cb .left-half {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -50%;
+  z-index: 2;
+  background: #ddc;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  clip: rect(0, 150px, 300px, 0);
+}
+
+.progress-cb .right-half {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: #ddc;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  clip: rect(0, 300px, 300px, 150px);
+  display: none;
+}

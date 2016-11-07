@@ -1,4 +1,5 @@
 @import "bourbon"
+@import "circle-progress-bar.sass"
 
 input[type=search]
 	-webkit-appearance: textfield
@@ -33,14 +34,14 @@ input::-webkit-search-cancel-button
 	display: none
 
 body
-	min-width: 320px
-	position: relative
-	font-family: 'Montserrat Regular', sans-serif
-	font-size: 16px
-	line-height: 1.6
+	min-width: 320px;
+	position: relative;
+	font-family: 'Quicksand Regular', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
 	background: #fff
 	margin: 0
-	color: #000
+	color: #fff
 
 h1, h2, h3, p, ul
 	padding: 0
@@ -49,6 +50,8 @@ h1, h2, h3, p, ul
 h1, h2, h3
 	font-weight: normal
 	font-size: 100%
+	font-family: 'Quicksand Bold', sans-serif;
+	line-height: 1
 
 li
 	list-style: none
@@ -63,261 +66,738 @@ table
 	border-collapse: collapse
 	border-spacing: 0
 
-html, body
-	height: 100%
-
-.wrapper
-	position: relative
-	height: 100%
-	min-height: 1200px
-	padding-bottom: 175px
-	box-sizing: border-box
-
-.container
-	max-width: 1200px
-	margin: 0 auto
-	+clearfix
-
 .header
-	height: 685px
 	position: relative
-	z-index: 1
-	background: #ef5350
-	color: #fff
-
-	&::before
-		content: ''
-		position: absolute
-		width: 50%
-		height: 960px
-		bottom: -215px
-		left: 0
-		background: url(../img/lines.png) no-repeat bottom right
-
+	width: 100%
+	height: 100vh;
+	max-height: 1120px
+	background: #2f2d29 url(../img/header-bg.jpg) no-repeat
+	background-position: 0 80px
+	background-size: cover
+	overflow: hidden
+	
 	.top-section
-		position: relative
-		z-index: 2
-		background: linear-gradient(to bottom, #04e4a2 20px, #e94643 20px)
-		height: 100px
-		box-sizing: border-box
-		padding-top: 20px
+		height: 80px
 		line-height: 80px
-
+		background: #fff
+		overflow: hidden
+		
 		.logo
 			float: left
-			font-family: 'Montserrat Bold', sans-serif
-			font-size: 35px
-			margin-left: 145px
-
-		.contact-us
-			float: right
-			margin-right: 20px
-			font-size: 16px
-			border-bottom: 2px solid #fdd835
-			text-transform: uppercase
-			letter-spacing: 1px
-			line-height: 1.1
-			margin-top: 28px
-
-	.content
-		float: right
-		width: 50%
-		margin-top: 185px
-		padding-left: 20px
-		padding-right: 70px
-		box-sizing: border-box
-
-		h1
-			font-size: 30px
-			text-transform: uppercase
-			line-height: 1.2
-
-		p
-			font-size: 18px
-			font-family: 'Montserrat ExtraLight', sans-serif
-			line-height: 1.2
-			margin-top: 25px
-
-		.button
-			text-transform: uppercase
-			font-size: 18px
-			margin-top: 50px
-			background: #04e4a2
-
-			transition: background 150ms
-
-			float: right
-			height: 50px
-			line-height: 50px
-			padding: 0 25px
-			color: #fff
-			border-radius: 5px
-
-			&:hover
-				background: darken(#04e4a2, 2)
-
-	.mobile
-		position: absolute
-		top: 160px
-		right: 60%
-		z-index: 1
-		width: 388px
-		height: 814px
-		background: url(../img/mobile.png) no-repeat bottom left
-		background-size: 100%
-		
-		.photo
-			width: 328px
-
-			margin: 
-				top: 118px
-				left: 29px
+			margin-left: 210px
+			height: 100%
 
 			img
-				width: 100%
-				display: block
+				display: inline-block
+				vertical-align: middle
 
-.lets-talk
-	width: 50%
-	float: right
-	padding-left: 2%
-	padding-right: 2%
-	box-sizing: border-box
-
-	h2
-		font-size: 20px
-		font-family: 'Montserrat Light', sans-serif
-		line-height: 2.5
-		padding-left: 25px
-		margin-top: 20px
-		color: #ff8a80
-
-	form
-		width: 43.3333
-
-		& input[type="text"], & input[type="email"], textarea
-			border: 2px solid #e3f2fd
-			font-size: 16px
-			font-family: 'Montserrat Light', sans-serif
-			color: #636363
-			padding: 15px 20px
-			margin-top: 15px
-			box-sizing: border-box
-			transition: border 100ms
-
-			&:focus
-				border-color: darken(#e3f2fd, 5)
-
-		input
-			width: 48.0769%
-
-		textarea
-			width: 100%
-			height: 100px
-			resize: none
-
-		.right
+		.btn-menu
 			float: right
-		
-		.fancy-select
-			float: right
-			margin-top: 15px
-			width: 48.0769%
-
-			.trigger
-				box-sizing: border-box
-				width: 100%
-				background: transparent
-				border: 2px solid #e3f2fd
-				font-size: 16px
-				font-family: 'Montserrat Light', sans-serif
-				box-shadow: none
-				padding: 14px 20px
-				line-height: 1.4
-
-				&::after
-					width: 20px
-					height: 10px
-					border: none
-					background: url(../img/sprite.png) no-repeat -31px 0
-					top: 22px
-					right: 20px
-
-				&.open
-					background-color: #e3f2fd
-					border-color: #e3f2fd
-
-			.options
-				width: 100%
-				background: #e3f2fd
-
-				.hover
-					color: #333
-
-			select:focus + .trigger
-				box-shadow: none
-
-	button
-		margin-top: 15px
-		margin-bottom: 30px
-		float: right
-		border: none
-		outline: none
-		background: #ef5350
-		line-height: 45px
-		padding: 0 35px
-		font-size: 20px
-		font-family: 'Montserrat SemiBold', sans-serif
-		text-transform: uppercase
-		color: #fff
-		border-radius: 5px
-		transition: background 150ms
-		cursor: pointer
-
-		&:hover
-			background: darken(#ef5350, 5)
-
-.footer
-	position: absolute
-	bottom: 0
-	width: 100%
-	min-height: 75px
-	background: darken(#fefcf2, 7)
-	z-index: 2
-
-	font-size: 16px
-	font-family: 'Montserrat Light', sans-serif
-	color: #636363
-	line-height: 70px
-
-
-	.copyright
-		display: inline-block
-		margin-left: 20px
-
-	.contact-mail
-		position: relative
-		float: right
-		width: 50%
-		padding-left: 85px
-		box-sizing: border-box
-		
-		&::before
-			content: ''
-			position: absolute
-			top: 24px
-			left: 30px
-			width: 30px
-			height: 23px
-			background: url(../img/sprite.png) no-repeat top left
-
-		a
-			color: #636363
-			transition: color 200ms
+			width: 440px
+			height: 100%
+			background: #000
+			color: #fff
+			font-size: 18px
+			font-family: 'Quicksand Light', sans-serif;
+			text-transform: uppercase
+			cursor: pointer
+			transition: all 150ms
 
 			&:hover
-				color: darken(#636363, 20)
+				background: #111
+			
+			span
+				display: inline-block
+				vertical-align: middle
+
+			.sandwich
+				position: relative
+				width: 15px
+				height: 1px
+				background: #fff
+				margin:
+					left: 30px
+					right: 20px
+				transition: background 250ms
+
+				&::before, &:after
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 1px
+					background: #fff
+					transition: background 250ms
+
+				&::before
+					top: -6px
+
+				&::after
+					top: 6px
+		
+		.social
+			float: right
+
+			ul
+				overflow: hidden
+				margin-right: 15px
+
+				li
+					float: left
+
+					a
+						display: block
+						padding: 0 15px
+						font-size: 20px
+						color: #000
+						transition: all 150ms
+
+						&:hover
+							color: #f34739
+
+	.content
+		position: absolute
+		top: 50%
+		left: 0
+		width: 100%
+		height: 240px
+		margin-top: -120px
+		text-align: center
+
+		span
+			display: block
+			position: relative
+			width: 570px
+			margin: 0 auto
+			font-size: 30px
+			font-family: 'Dosis Light', sans-serif;
+			line-height: 1.5
+
+			&::before, &::after
+				content: ''
+				width: 160px
+				position: absolute
+				top: 50%
+				height: 1px
+				margin-top: -1px
+				background: #fff
+
+			&::before
+				left: 10px
+
+			&::after
+				right: 10px
+
+		h1
+			font-size: 72px
+			font-family: 'Quicksand Bold', sans-serif;
+			text-transform: uppercase
+
+		.button
+			position: relative
+			top: 50px
+			display: inline-block
+			width: 150px
+			height: 50px
+			line-height: 50px
+			font-size: 18px
+			text-transform: uppercase
+			border: 2px solid
+			cursor: pointer
+			border-radius: 100px
+			transition: all 250ms
+			
+			&:hover
+				border-color: lighten(#f34739, 7)
+				box-shadow: 0px 0px 100px #f34739
+
+	.bottom-arrow
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 40px
+		margin: auto
+		width: 50px
+		height: 50px
+		font-size: 30px
+		transform: rotate(90deg)
+		font-family: 'Quicksand Light', sans-serif
+
+		a
+			display: inline-block
+			width: 100%
+			height: 100%
+			color: #fff
+			transition: padding-left 250ms
+
+			&:hover
+				padding-left: 10px
+
+.menu
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 100
+	width: 100%
+	height: 0
+	z-index: 100
+	background: rgba(0, 0, 0, .8)
+	opacity: 0
+	transition: all 500ms
+	overflow: hidden
+
+	.menu-overlay
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 1
+
+		.menu-close
+			position: absolute
+			top: 5%
+			right: 5%
+			z-index: 2
+			width: 7%
+			padding-bottom: 7%
+			border: 2px solid #fff
+			border-radius: 50%
+			transition: border 250ms
+			cursor: pointer
+
+			&::before, &::after
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				margin: auto
+				width: 80%
+				height: 2px
+				background: #fff
+				transition: background 250ms
+
+			&::before
+				transform: rotate(45deg)
+
+			&::after
+				transform: rotate(-45deg)
+
+			&:hover
+				border-color: darken(#f34739, 5)
+
+				&::before, &::after
+					background: darken(#f34739, 5)
+
+	.list
+		text-align: center
+		margin: 0 auto
+		padding: 40px 0
+
+		li
+
+			a
+				display: block
+				position: relative
+				z-index: 3
+				width: 50%
+				margin: 10px auto
+				padding: 20px
+				background: rgba(#009989, .8)
+				border-radius: 5px
+				color: #fff
+				transition: background 250ms
+
+				&:hover
+					background: rgba(#009989, .95)
+
+.is-menu
+	overflow: hidden
+
+.is-menu .menu
+	height: 100%
+	overflow-y: auto
+	opacity: 1
+
+#diagram
+	text-align: center
+	overflow: hidden
+	margin-bottom: 60px
+
+	.item-1, & .item-2, & .item-3
+		display: inline-block
+		width: 210px
+		margin: 0 5%
+		margin-top: 45px
+		vertical-align: middle
+
+		.box-progress
+			position: relative
+			width: 210px
+			height: 210px
+
+			.progress-cb
+				background: #e5e3e3
+				transform: rotate(160deg);
+
+			.center-num
+				position: absolute
+				top: 2%
+				left: 2%
+				width: 96%
+				height: 96%
+				background: #fff
+				color: #000
+				z-index: 5
+				border-radius: 50%
+				
+				.num
+					font-size: 72px
+					font-family: tahoma, sans-serif
+					line-height: 1
+					margin-top: 25%
+
+				.caption
+					font-size: 18px
+					line-height: 1
+					margin-top: 3%
+					text-transform: uppercase
+					color: #454545
+
+		.text
+			margin-top: 35px
+			height: 80px
+			color: #454545
+			line-height: 1.2
+
+	.item-1
+		.num
+			color: #f34739
+
+		.left-half
+			background: #f34739
+
+		.right-half
+			background: #f34739
+
+	.item-2
+		.num
+			color: #20a698
+			
+		.left-half
+			background: #20a698
+
+		.right-half
+			background: #20a698
+
+	.item-3
+		.num
+			color: #152b3c
+			
+		.left-half
+			background: #152b3c
+
+		.right-half
+			background: #152b3c
+// Extend sections
+.sec-title
+	.title
+		height: 300px
+		background: url(../img/team-title-bg.jpg) no-repeat top left
+		background-size: cover
+		text-align: center
+		padding: 50px
+		box-sizing: border-box
+
+		.border
+			max-width: 1024px
+			height: 190px
+			border: 2px solid #ddd
+			margin: 0 auto
+
+		span
+			display: block
+			position: relative
+			width: 230px
+			margin: 60px auto 0 auto
+			font-size: 18px
+			font-family: 'Quicksand Light', sans-serif;
+			line-height: 1.5
+
+			&::before, &::after
+				content: ''
+				width: 65px
+				position: absolute
+				top: 50%
+				height: 1px
+				margin-top: -1px
+				background: #fff
+
+			&::before
+				left: 0
+
+			&::after
+				right: 0
+
+		h2
+			font-size: 48px
+			font-family: 'Quicksand Bold', sans-serif;
+			text-transform: uppercase
+
+.team
+	@extend .sec-title
+
+	.title
+		height: 300px
+		background: url(../img/team-title-bg.jpg) no-repeat top left
+		background-size: cover
+		text-align: center
+		padding: 50px
+		box-sizing: border-box
+
+		.border
+			max-width: 1024px
+			height: 190px
+			border: 2px solid #ddd
+			margin: 0 auto
+		span
+			position: relative
+			width: 230px
+			margin: 60px auto 0 auto
+			font-size: 18px
+			font-family: 'Quicksand Light', sans-serif;
+			line-height: 1.5
+
+			&::before, &::after
+				content: ''
+				width: 65px
+				position: absolute
+				top: 50%
+				height: 1px
+				margin-top: -1px
+				background: #fff
+
+			&::before
+				left: 0
+
+			&::after
+				right: 0
+
+		h2
+			font-size: 48px
+			font-family: 'Quicksand Bold', sans-serif;
+			text-transform: uppercase
+	
+	.team-items
+		max-width: 1180px
+		margin:
+			top: 50px
+			left: auto
+			right: auto
+			bottom: 20px
+
+		.item
+			overflow: hidden
+
+			.photo, & .text
+				width: 50%
+				position: relative
+				height: 300px
+
+				&::before
+					content: ''
+					position: absolute
+					top: 20px
+					left: 20px
+					right: 20px
+					bottom: 20px
+					border: 2px solid #fff
+			
+			.photo
+				background: #cfbbb6
+				overflow: hidden
+
+				img
+					min-width: 100%
+					min-height: 100%
+					margin: 0 auto
+			
+			.text
+				text-align: center
+
+				h2
+					font-size: 36px
+					padding-top: 60px
+					color: #000
+					font-family: 'Quicksand Regular', sans-serif;
+					text-transform: uppercase
+
+				h3
+					position: relative
+					font-size: 16px
+					color: #000
+					font-family: 'Quicksand Regular', sans-serif;
+					padding-top: 4px
+
+					&::after
+						content: ''
+						display: block
+						margin:
+							top: 20px
+							left: auto
+							right: auto
+						width: 180px
+						height: 2px
+						background: #f34739
 
 
+				p
+					font-size: 20px
+					color: #454545
+					font-family: 'Quicksand Regular', sans-serif
+					width: 320px
+					margin:
+						top: 30px
+						left: auto
+						right: auto
+			
+			&:nth-child(2n+1)
+				.photo
+					float: left
 
+					&::before
+						right: 0
+						border-right: none
+
+					&::after
+						content: ''
+						position: absolute
+						top: 0
+						bottom: 0
+						right: 0
+						margin: auto
+						border-top: 45px solid transparent
+						border-right: 45px solid #fff
+						border-bottom: 45px solid transparent
+						width: 0
+						height: 0
+
+				.text
+					float: right
+
+					&::before
+						left: 0
+						border-left: none
+						border-color: #000
+
+			&:nth-child(2n)
+
+				.photo
+					float: right
+
+					&::before
+						left: 0
+						border-left: none
+
+					&::after
+						content: ''
+						position: absolute
+						top: 0
+						bottom: 0
+						left: 0
+						margin: auto
+						border-top: 45px solid transparent
+						border-left: 45px solid #fff
+						border-bottom: 45px solid transparent
+						width: 0
+						height: 0
+						
+				.text
+					float: left
+
+					&::before
+						right: 0
+						border-right: none
+						border-color: #000
+
+.portfolio
+	overflow: hidden
+
+	@extend .sec-title
+
+	.title
+		background: url(../img/portfolio-title-bg.jpg)
+
+		span
+			width: 265px
+			
+			&::before, &::after
+				width: 25px
+	
+	.items
+		.item
+			position: relative
+			float: left
+			width: 14.2857%
+			padding-bottom: 14.2857%
+			background: #eee
+
+			a, & a .htext
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+			
+			a
+				z-index: 1
+				overflow: hidden
+
+				img
+					min-width: 100%
+					min-height: 100%
+					filter: grayscale(100%)
+					transition: all 250ms
+				
+				.htext
+					z-index: 2
+					background: url(../img/portfolio/eye.png) no-repeat center 40%
+					background-size: 50px auto
+					opacity: 0
+					transition: all 250ms
+
+					span
+						display: block
+						margin-top: 60%
+						font-size: 20px
+						color: #000
+						text-align: center
+
+				&:hover img
+					filter: grayscale(0)
+
+				&:hover .htext
+					opacity: 1
+					background-color: rgba(255,255,255, .7)
+
+.brands
+	@extend .sec-title
+
+	.title
+		background: url(../img/brands-title-bg.jpg)
+
+		span
+			width: 180px
+			
+			&::before, &::after
+				width: 15px
+
+	.brands-items
+
+		.row
+			overflow: hidden
+			border-top: 1px solid #f5f5f5
+
+			&:first-child
+				border-top: none
+
+			.box-items
+				overflow: hidden
+				max-width: 1024px
+				margin: 0 auto
+
+				.item
+					position: relative
+					float: left
+					width: 14.2857%
+					padding-bottom: 14.2857%
+					//background: #000
+
+					.inner-box
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						border-left: 1px solid #f5f5f5
+						//background: #ddd
+						z-index: 5
+						
+						img
+							display: block
+							position: absolute
+							top: 0
+							bottom: 0
+							left: 0
+							right: 0
+							margin: auto
+						
+					&:first-child
+						.inner-box
+							border-left: none
+
+			&.ornament
+				height: 50px
+
+.footer
+	background: #101010
+	color: #4a4a4a
+	text-align: center
+	
+	.top-section
+		.items
+			padding:
+				bottom: 25px
+
+			.item
+				display: inline-block
+				width: 160px
+				margin: 0 45px
+
+				h2
+					position: relative
+					font-size: 30px
+					font-family: 'Quicksand Light', sans-serif;
+					color: #fff
+
+					padding:
+						top: 50px
+						bottom: 20px
+
+					&::after
+						content: ''
+						position: absolute
+						bottom: 0
+						left: 0
+						right: 0
+						margin: auto
+						width: 140px
+						height: 1px
+						background: #009989
+
+				p
+					padding:
+						top: 30px
+
+					a
+
+	a
+		color: lighten(#4a4a4a, 5)
+		transition: color 200ms
+
+		&:hover
+			color: lighten(#4a4a4a, 30)
+
+	.bottom-section
+		background: #0e0e0d
+
+		.copyright
+			line-height: 60px
+			font-size: 12px
+				
+	
 @import "media"

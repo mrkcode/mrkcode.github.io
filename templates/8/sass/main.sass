@@ -1,0 +1,235 @@
+@import "bourbon"
+@import "variables"
+
+.about-us
+	height: 1px
+	min-height: 610px
+	background-color: #eeefef
+	
+	.container
+		height: 100%
+		background-image: url(../img/about-us-bg.jpg)
+		background-position: center right
+		background-repeat: no-repeat
+
+	h2
+		margin-top: 120px
+
+	p
+		font-family: 'Merriweather Light', sans-serif
+		text-align: center
+		font-size: rem(19px)
+		line-height: 1.7
+
+	.signature
+		float: right
+		margin-top: 35px
+		margin-right: 30px
+		width: 135px
+		height: 91px
+		background-image: url(../img/signature.png)
+		background-position: center center
+		background-repeat: no-repeat
+	
+.menu-present
+	
+	.group-buttons
+		text-align: center
+		margin-bottom: 30px
+
+		li
+			display: inline-block
+			font-size: rem(12px)
+			color: $text-color
+			border: 1px solid transparent
+			padding: 7px 15px
+			transition: border 100ms ease
+			cursor: pointer
+
+		li.active
+			border-color: $text-color
+			text-decoration: none
+
+	ul
+		margin: 0
+		padding: 0
+
+	li
+		position: relative
+		margin-top: 25px
+		list-style: none
+		font-size: rem(12px)
+		font-family: 'Merriweather Light', sans-serif
+	
+	.name
+		width: 2000px
+		text-transform: uppercase
+		white-space: nowrap
+
+		&::after
+			content: '......................................................................................................................................................................................................'
+			margin-left: 5px
+			
+	.small
+		font-size: 10px
+
+	.price
+		position: absolute
+		top: 0
+		right: 0
+		background: #fff
+		padding-left: 5px
+
+	.over-text
+		overflow: hidden
+	
+	.tabs-group
+		position: relative
+		min-height: 440px
+
+	.js-tab
+		position: absolute
+		width: 100%
+		top: 0
+		left: 0
+		opacity: 0
+		transition: opacity 100ms ease
+
+		&.active
+			opacity: 1
+
+.footer
+	height: 610px
+	min-height: 610px
+	background-color: #eeefef
+	background-image: url(../img/footer-bg-left.jpg), url(../img/footer-bg-right.jpg)
+	background-position: left top, right top
+	background-repeat: no-repeat
+	
+	.container
+		position: relative
+		height: 100%
+
+	h3
+		font-size: rem(12px)
+		text-transform: uppercase
+		margin-bottom: 3px
+
+	p
+		margin: 0
+
+	.left
+		float: left
+
+	.right
+		float: right
+
+	.contact
+		font-size: rem(10px)
+
+	form
+		text-align: center
+
+		input
+			border: none
+			outline: none
+			background: transparent
+			border-bottom: 1px solid #777878
+			padding: 2px 12px
+			width: 44.4444%
+
+			&::-webkit-input-placeholder 
+				color: $text-color
+				font-family: 'Merriweather Italic', sans-serif
+
+			&:-moz-placeholder 
+				color: $text-color
+				font-family: 'Merriweather Italic', sans-serif
+
+			&::-moz-placeholder 
+				color: $text-color
+				font-family: 'Merriweather Italic', sans-serif
+
+			&:-ms-input-placeholder
+				color: $text-color
+				font-family: 'Merriweather Italic', sans-serif
+			
+			&.name
+				float: left
+
+			&.email
+				float: right
+
+			&.message
+				width: 100%
+				margin-top: 40px
+
+		button
+			font-size: rem(12px)
+			padding: 7px 17px
+			background: transparent
+			font-family: 'Merriweather Regular', sans-serif
+			border: 1px solid #777878
+			margin-top: 30px
+			transition: all 100ms
+
+			&:hover
+				box-shadow: 0 0 10px darken(#fa5054, 10)
+
+	.bottom
+		position: absolute
+		bottom: 0
+		height: 55px
+		width: 100%
+
+	.social
+		float: right
+		text-align: right
+
+		a
+			display: inline-block
+			width: 35px
+			height: 35px
+			line-height: 35px
+			text-align: center
+			border: 1px solid #777878
+			font-size: rem(22px)
+			color: $text-color
+			transition: all 100ms ease
+			
+			&:hover
+				color: darken(#fa5054, 10)
+				border-color: #6c8734
+
+	.copyright
+		line-height: 55px
+		font-size: 12px
+		text-align: center
+	
+.btn-to-top
+	position: fixed
+	bottom: 7%
+	right: 5%
+	width: 80px
+	height: 0
+	line-height: 80px
+	font-size: 30px
+	color: $text-color
+	background: rgba($text-color, .5)
+	text-align: center
+	border-radius: 10px
+	z-index: 11
+	opacity: 0
+	transition: opacity 250ms, height 1ms ease 250ms
+
+	&.active
+		color: $text-color
+		height: 80px
+		opacity: 1
+		transition: height 1ms, opacity 250ms, background 150ms
+
+		&:hover
+			color: $text-color
+			background: rgba($text-color, .7)
+
+@import "media"

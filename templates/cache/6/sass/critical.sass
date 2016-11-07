@@ -1,0 +1,425 @@
+@import "bourbon"
+@import "vars"
+@import "fonts"
+@import "../css/animate-custom"
+
+*::-webkit-input-placeholder 
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder 
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder 
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder 
+	color: #666
+	opacity: 1
+
+body input:required:invalid,
+body textarea:required:invalid
+	box-shadow: none
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button
+	display: none
+
+body
+	min-width: 320px
+	position: relative
+	font-family: 'Open Sans', sans-serif
+	font-size: 14px
+	line-height: 1.7857
+	background: #f3f3f3
+	margin: 0
+	color: #81868e
+	letter-spacing: 1px
+
+h1, h2, h3, p, ul
+	padding: 0
+	margin: 0
+
+h1, h2, h3
+	font-weight: normal
+	font-family: 'Roboto Medium', sans-serif
+	font-size: 20px
+	color: #333b46
+	letter-spacing: 4px
+
+h2, h3
+	margin-bottom: 32px
+	line-height: 1
+	text-align: center
+
+	&::after
+		content: ''
+		display: block
+		width: 45px
+		height: 3px
+		margin: 25px auto 0 auto
+		background: #898989
+
+li
+	list-style: none
+
+img
+	border: none
+
+a
+	text-decoration: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+.button
+	display: inline-block
+	background: $red
+	color: #fff
+	transition: background 200ms
+	cursor: pointer
+
+	&:hover
+		background: darken($red, 9)
+
+section > p
+		max-width: 545px
+		margin: auto
+		padding: 0 20px
+		text-align: center
+// -----------------------------------------------------------------------------
+// Styles
+// -----------------------------------------------------------------------------
+
+body.active-mob-menu
+	overflow: hidden
+
+	.menu
+		height: 100%
+		overflow: auto
+.header
+	min-height: 555px
+	height: 100vh
+	position: relative
+	background: #e1e1e1
+	padding-top: 60px
+	box-sizing: border-box
+	overflow: hidden
+
+	.logo
+		float: left
+		margin:
+			left: 100px
+
+	.menu
+		float: right
+		margin:
+			right: 170px
+			top: 5px
+
+		ul
+			li
+				float: left
+
+				a
+					display: block
+					padding: 0 12px
+					text-transform: uppercase
+					color: #333b46
+					transition: color 150ms
+
+				a:hover
+					color: #2b8aff
+		
+	.btn-mobile
+		display: none
+		margin:
+			right: 170px
+			top: 1px
+		float: right
+		height: 30px
+		width: 50px
+		cursor: pointer
+
+		span
+			position: relative
+			display: block
+			height: 2px
+			background: #333b46
+			margin-top: 14px
+			transition: background 100ms
+
+			&::before, &::after
+				content: ''
+				position: absolute
+				left: 0
+				right: 0
+				height: 2px
+				background: #333b46
+				transition: background 100ms
+
+			&::before
+				top: -15px
+
+			&::after
+				bottom: -15px
+
+	.btn-mobile:hover
+		span
+			background: darken($red, 12)
+
+			&::before, &::after
+				background: darken($red, 12)
+
+	.content
+		position: absolute
+		top: 0
+		bottom: 0
+		margin: auto
+		width: 100%
+		height: 80px
+		text-align: center
+		z-index: 5
+
+		h1
+			font-size: 35px
+
+		h2
+			font-family: 'Open Sans', sans-serif
+			font-size: 16px
+			color: inherit
+			letter-spacing: 5px
+			line-height: 1
+
+	[class^="bg"]
+		position: absolute
+
+	.bg-headphones
+		top: 20%
+		left: 0
+		width: 265px
+		height: 370px
+		background: url(../img/header-sprite.png) no-repeat
+
+	.bg-eyeglasses
+		top: 60%
+		left: 16%
+		width: 180px
+		height: 105px
+		background: url(../img/header-sprite.png) no-repeat -1080px -7px
+
+	.bg-pencil
+		bottom: 10%
+		left: 10%
+		width: 200px
+		height: 90px
+		background: url(../img/header-sprite.png) no-repeat -285px -27px
+
+	.bg-mouse
+		bottom: 8%
+		right: 20%
+		width: 95px
+		height: 155px
+		background: url(../img/header-sprite.png) no-repeat -946px -15px
+
+	.bg-penholder
+		top: 55%
+		right: 5%
+		width: 180px
+		height: 330px
+		background: url(../img/header-sprite.png) no-repeat -730px 0
+
+	.bg-glass
+		top: 34%
+		right: 10%
+		width: 155px
+		height: 185px
+		background: url(../img/header-sprite.png) no-repeat -540px -0px
+
+	.btn-scroll
+		display: block
+		width: 90px
+		height: 75px
+		position: absolute
+		bottom: 50px
+		left: 0
+		right: 0
+		margin: auto
+		text-align: center
+		cursor: pointer
+		letter-spacing: 0
+
+		.mouse
+			display: inline-block
+			height: 35px
+			width: 20px
+			margin:
+				top: 0
+				bottom: 10px
+			border: 1px solid #3e3f3f
+			border-radius: 17px
+			transition: margin 100ms
+		
+			&::before
+				content: ''
+				display: block
+				height: 8px
+				width: 2px
+				margin: 5px auto 0 auto
+				background: #3e3f3f
+
+		&:hover .mouse
+			margin:
+				top: 10px
+				bottom: 0
+
+
+		.text
+			color: $red
+			font-size: 12px
+			text-transform: uppercase
+
+@media only screen and (max-height : 812px)
+	.header
+		.bg-penholder
+			display: none
+
+		.bg-eyeglasses
+			display: none
+
+
+@media only screen and (max-width : 1200px)
+	.header
+
+		.content
+
+			h1
+				font-size: 26px
+
+			h2
+				font-family: 'Open Sans', sans-serif
+				font-size: 15px
+				color: inherit
+				letter-spacing: 3px
+				line-height: 1
+
+@media only screen and (max-width : 992px)
+	.header
+		[class^="bg"]
+			display: none
+
+		.menu
+			position: fixed
+			top: 0
+			left: 0
+			margin: 0
+			width: 100%
+			height: 0
+			z-index: 10
+			overflow: hidden
+			background: rgba(0, 0, 0, 0.8)
+			transition: height 250ms
+
+			ul
+				height: auto
+				margin-top: 140px
+				margin-bottom: 140px
+
+				li
+					float: none
+
+					a
+						display: block
+						line-height: 98px
+						padding: 0 25px
+						margin: 10px
+						font-size: 25px
+						font-family: 'Open Sans Semibold', sans-serif
+						text-decoration: none
+						color: #fff
+						background: rgba(#2b8aff, .9)
+						border: none
+						border-radius: 10px
+						text-align: center
+						transition: background 150ms
+
+						&:hover
+							background: rgba($red, .9)
+							color: #fff
+
+			.mob-overlay
+				height: 100%
+				width: 100%
+				position: absolute
+				top: 0
+				left: 0
+				z-index: -1
+
+				.close
+					position: relative
+					border-radius: 50%
+					border: 2px solid #ddd
+					height: 100px
+					width: 100px
+					margin: 20px auto
+					cursor: pointer
+					transition: border 250ms
+
+					&::before, &::after
+						content: ''
+						position: absolute
+						background: #fff
+						height: 2px
+						width: 80%
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						margin: auto
+						transition: background 250ms
+
+					&::before
+						transform: rotate(45deg)
+
+					&::after
+						transform: rotate(-45deg)
+
+				.close:hover
+					border: 2px solid red
+
+					&::before, &::after
+						background: #f00
+
+		.btn-mobile
+			display: block
+
+@media only screen and (max-width : 768px)
+	.header
+
+		.btn-mobile
+			margin-right: 80px
+
+@media only screen and (max-width : 480px)
+	.header
+		.logo
+			float: none
+			text-align: center
+			margin: 0
+
+		.btn-mobile
+			float: none
+			margin: 50px auto
+
+		.content
+
+			h1
+				font-size: 20px
+				letter-spacing: 1px
+
+			h2
+				font-size: 14px
+				letter-spacing: 1px
+				line-height: 1.4

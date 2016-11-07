@@ -1,0 +1,314 @@
+@import "bourbon"
+@import "vars"
+
+section
+	> h2
+		text-align: center
+		margin-top: 110px
+		margin-bottom: 20px
+		+ p
+			margin-top: 0
+			margin-bottom: 110px
+			color: #999
+			text-align: center
+
+	@media only screen and (max-width : 480px)
+		> h2
+			margin-top: 50px
+			font-size: 30px
+			+ p
+				margin-bottom: 50px
+.feature
+	img
+		float: left
+	h3
+		margin: 0
+		margin-left: 100px
+		color: #353854
+		font-size: 24px
+		font-weight: bold
+		text-transform: none
+	p
+		margin-left: 100px
+		color: #aeaeae
+		line-height: 30px
+
+	@media only screen and (max-width : 1200px)
+		h3
+			font-size: 20px
+
+	@media only screen and (max-width : 992px)
+		margin-top: 40px
+		&:first-child
+			margin-top: 0
+
+.slider
+	margin-top: -50px
+	.slick-track
+		padding-top: 60px
+		padding-bottom: 100px
+	.slick-prev
+		z-index: 1
+		width: auto
+		height: auto
+		display: inline-block
+		margin-left: 40px
+		&::before
+			content: "\f104"
+			font-family: 'FontAwesome'
+			color: #c3cfe5
+			font-size: 100px
+	.slick-next
+		z-index: 1
+		width: auto
+		height: auto
+		display: inline-block
+		margin-right: 40px
+		&::before
+			content: "\f105"
+			font-family: 'FontAwesome'
+			color: #c3cfe5
+			font-size: 100px
+	.slick-slide
+		opacity: 0
+		transition: all 500ms
+		&.slick-active
+			opacity: 1
+	.item
+		&.slick-center
+			position: relative
+			z-index: 1
+			transform: scale(1.2)
+		img
+			max-width: 100%
+			display: block
+			margin: 0 auto
+			box-shadow: 0px 20px 30px #bbb
+	.slick-active img
+		position: relative
+		right: -100px
+	.slick-active + .slick-center img
+		position: relative
+		right: auto
+	.slick-active + .slick-center + .slick-active img
+		left: -100px
+		right: auto
+	.slick-list
+		overflow: hidden
+
+	@media only screen and (max-width : 768px)
+		.slick-active img
+			position: static
+
+#screenshots
+	padding-bottom: 30px
+	.icon
+		margin-top: 125px
+	h3
+		margin: 35px 0
+	p
+		margin-bottom: 45px
+	.info
+		display: inline-block
+		margin: 0
+		padding: 10px 0 10px 10px
+		overflow: hidden
+		transform: rotate(180deg)
+		li
+			float: left
+			width: 60px
+			height: 60px
+			list-style: none
+			line-height: 60px
+			background-color: #fff
+			color: #c3cfe5
+			font-size: 16px
+			text-align: center
+			border-radius: 50%
+			transform: rotate(180deg)
+			margin-right: -10px
+			box-shadow: 7px 0 10px #ccc
+			z-index: 1
+			position: relative
+	@media only screen and (max-width : 921px)
+		text-align: center
+		.icon
+			margin-top: 45px
+
+.screenshot
+	padding: 50px 0
+	position: relative
+	.phone
+		width: 290px
+		height: 605px
+		margin-left: 90px
+		+bgimage("../img/screen-phone.png")
+		text-align: left
+		img
+			margin-top: 58px
+			margin-left: 15px
+	.circle
+		position: absolute
+		z-index: 1
+		width: 90px
+		height: 90px
+		line-height: 90px
+		text-align: center
+		font-weight: bold
+		color: #fff
+		border-radius: 50%
+		&.name
+			top: 210px
+			left: 335px
+			background-color: $yellow
+			font-size: 18px
+		&.num
+			top: 435px
+			left: 26px
+			background-color: #6ca3ff
+			font-size: 30px
+	&::before
+		content: ''
+		position: absolute
+		right: 82px
+		top: 0
+		bottom: 0
+		left: 0
+		z-index: -1
+	&.cloudy
+		.circle.name
+			background-color: #fcec64
+		.circle.num
+			background-color: #6ca3ff
+		&::before
+			+bgimage("../img/screenshots/cloudy-bg.png", no-repeat, right center)
+
+	&.sunny
+		.circle.name
+			background-color: #f2a14e
+		.circle.num
+			background-color: #fc6a42
+		&::before
+			+bgimage("../img/screenshots/sunny-bg.png", no-repeat, right center)
+	&.rainy
+		.circle.name
+			background-color: #b8faee
+		.circle.num
+			background-color: #7693c8
+		&::before
+			+bgimage("../img/screenshots/rainy-bg.png", no-repeat, right center)
+
+	@media only screen and (max-width : 921px)
+		.phone
+			display: inline-block
+			margin-left: 0
+		.circle
+			display: none
+		&.cloudy::before
+			display: none
+
+#reviews
+	font-size: 24px
+	blockquote
+		position: relative
+		margin: 0
+		padding: 40px 0
+		&::before, &::after
+			position: absolute
+			display: block
+			font-size: 142px
+			color: $blue
+		&::before
+			content: '“'
+			top: -37px
+		&::after
+			content: '“'
+			bottom: -7px
+			right: 0
+			transform: rotate(180deg)
+	cite
+		font-size: 18px
+		font-style: normal
+	.rev-line
+		margin-bottom: 75px
+
+	@media only screen and (max-width : 991px)
+		.rev-line
+			margin-bottom: 0
+
+#download
+	position: relative
+	background: $blue
+	height: 460px
+	color: #fff
+	&::before
+		content: ''
+		position: absolute
+		z-index: 1
+		width: 50%
+		right: 0
+		top: 0
+		bottom: 0
+		+bgimage("../img/download-bg.jpg", no-repeat, left bottom)
+	h2
+		margin-top: 120px
+		color: #fff
+	p
+		max-width: 360px
+	.container
+		position: relative
+		z-index: 2
+
+	@media only screen and (max-width : 480px)
+		h2
+			margin-top: 40px
+
+footer
+	background-color: #353854
+	a
+		color: #b5b5c8
+	.logo
+		color: $blue
+		span
+			color: $orange
+	.menu a
+		color: #b5b5c8
+	.btn-mobile
+		margin-right: 10px
+	.top-line
+		padding-top: 100px
+		padding-bottom: 100px
+	.copyright
+		color: #565b87
+		text-align: right
+		padding-top: 45px
+		padding-bottom: 80px
+	hr
+		width: auto
+		max-width: 1590px
+		margin: 0 auto
+		border-top: 1px solid #434769
+
+	@media only screen and (max-width : 768px)
+		.copyright
+			text-align: center
+			
+.scroll-top, .scroll-top:link, .scroll-top:visited
+	color: #b3b3c6
+	position: absolute
+	bottom: 0
+	right: 100px
+	background-color: #434769
+	width: 50px
+	height: 40px
+	line-height: 40px
+	text-align: center
+	font-size: 28px
+	border-radius: 10px 10px 0 0
+	&:hover
+		color: #b3b3c6
+
+	@media only screen and (max-width : 768px)
+		margin: auto
+		left: 0
+		right: 0

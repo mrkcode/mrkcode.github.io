@@ -1,0 +1,361 @@
+@font-face {
+  font-family: "Merriweather Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/merriweather-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-bold-webfont.woff2") format("woff2"), url("../fonts/merriweather-bold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Merriweather Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/merriweather-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-italic-webfont.woff2") format("woff2"), url("../fonts/merriweather-italic-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Merriweather Light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/merriweather-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-light-webfont.woff2") format("woff2"), url("../fonts/merriweather-light-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Merriweather Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/merriweather-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-regular-webfont.woff2") format("woff2"), url("../fonts/merriweather-regular-webfont.woff") format("woff");
+}
+
+html {
+  min-width: 320px;
+  position: relative;
+  font-size: 16px;
+  font-family: 'Merriweather Regular', sans-serif;
+  background: #fff;
+  color: #3c3c3c;
+}
+
+h1, h2 {
+  font-family: 'Merriweather Light', sans-serif;
+  font-size: 1.5625rem;
+  text-align: center;
+}
+
+h1::after, h2::after {
+  content: '';
+  display: block;
+  width: 160px;
+  height: 21px;
+  margin-top: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../img/h-decor-bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+h2 {
+  margin: 40px 0;
+}
+
+.header {
+  height: 610px;
+  background-color: #f3f3f3;
+  background-image: url(../img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header > .container,
+.header > .container .row,
+.header > .container .col-content {
+  height: 100%;
+}
+
+.header .menu {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header .menu ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.header .menu li {
+  float: left;
+  list-style: none;
+}
+
+.header .menu a {
+  display: block;
+  padding: 1.25rem;
+  text-decoration: none;
+  color: #3c3c3c;
+  font-size: 0.75rem;
+  border: 1px solid transparent;
+  -webkit-transition: border 110ms ease;
+  transition: border 110ms ease;
+}
+
+.header .menu a:hover {
+  border-color: #3c3c3c;
+}
+
+.header .btn-mobile {
+  display: none;
+  float: right;
+  margin-top: 30px;
+  margin-right: 30px;
+  font-size: 3.125rem;
+  color: #3c3c3c;
+  -webkit-transition: color 100ms ease;
+  transition: color 100ms ease;
+}
+
+.header .btn-mobile:hover {
+  color: #e1694d;
+}
+
+.header h1 {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 357px;
+}
+
+.header h1::after {
+  margin-top: 1.875rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .header {
+    background-position: -200px 0;
+  }
+  .header .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-transition: height 250ms;
+    transition: height 250ms;
+  }
+  .header .menu ul {
+    height: auto;
+    margin-top: 140px;
+    margin-bottom: 140px;
+  }
+  .header .menu ul li {
+    float: none;
+  }
+  .header .menu ul li a {
+    display: block;
+    line-height: 98px;
+    padding: 0 25px;
+    margin: 10px;
+    font-size: 25px;
+    font-family: 'Open Sans Semibold', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(43, 138, 255, 0.9);
+    border: none;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-transition: background 150ms;
+    transition: background 150ms;
+  }
+  .header .menu ul li a:hover {
+    background: rgba(0, 221, 221, 0.9);
+    color: #fff;
+  }
+  .header .menu .mob-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .header .menu .mob-overlay .close {
+    position: relative;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    height: 100px;
+    width: 100px;
+    margin: 20px auto;
+    cursor: pointer;
+    -webkit-transition: border 250ms;
+    transition: border 250ms;
+  }
+  .header .menu .mob-overlay .close::before, .header .menu .mob-overlay .close::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    height: 2px;
+    width: 80%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transition: background 250ms;
+    transition: background 250ms;
+  }
+  .header .menu .mob-overlay .close::before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .header .menu .mob-overlay .close::after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .header .menu .mob-overlay .close:hover {
+    border: 2px solid red;
+  }
+  .header .menu .mob-overlay .close:hover::before, .header .menu .mob-overlay .close:hover::after {
+    background: #f00;
+  }
+  .header .btn-mobile {
+    display: block;
+  }
+  .header h1 {
+    width: 320px;
+    font-size: 1.375rem;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    background-image: none;
+  }
+  .header h1 {
+    width: 320px;
+    font-size: 1.375rem;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.active-mob-menu {
+  overflow: hidden;
+}
+
+.active-mob-menu .header .menu {
+  height: 100%;
+  overflow: auto;
+}
+
+.info {
+  min-height: 240px;
+  padding-bottom: 20px;
+  background-color: #f7cd12;
+  text-align: center;
+}
+
+.info img {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.info h2 {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: 'Merriweather Bold', sans-serif;
+}
+
+.info p {
+  margin-top: 15px;
+  font-size: 0.625rem;
+}
+
+.specials-items {
+  padding-bottom: 60px;
+}
+
+.specials-items .item {
+  float: left;
+  width: 33.3333%;
+  overflow: hidden;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.specials-items .item::before {
+  content: '';
+  float: left;
+  padding-top: 100%;
+}
+
+.specials-items .cell {
+  float: left;
+  width: 50%;
+  max-height: 50%;
+  overflow: hidden;
+}
+
+.specials-items .cell::before {
+  content: '';
+  float: left;
+  padding-top: 100%;
+}
+
+.specials-items .right {
+  float: right;
+}
+
+.specials-items img {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.specials-items h3 {
+  font-size: 0.75rem;
+  font-family: 'Merriweather Bold', sans-serif;
+  line-height: 32px;
+  margin-top: 40px;
+  padding: 0 17px;
+  color: #383838;
+}
+
+.specials-items h3::after {
+  content: '';
+  display: block;
+  width: 55px;
+  height: 1px;
+  margin: 0 auto;
+  background: #383838;
+}
+
+.specials-items p {
+  margin: 17px;
+  font-family: 'Merriweather Light', sans-serif;
+  font-size: 0.625rem;
+  color: #3c3c3c;
+}
+
+.specials-items .price {
+  color: #383838;
+  font-family: 'Merriweather Bold', sans-serif;
+  margin: 0 17px;
+}

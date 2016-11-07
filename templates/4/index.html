@@ -6,14 +6,13 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>Indipixel</title>
+	<title>Top Designers</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="libs/fancyselect/fancySelect.css">
 	<link rel="stylesheet" href="css/main.css">
 
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -44,69 +43,478 @@
 	        }
 		})();
 	</script>
-	
+
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" href="css/ie-main.css">
-		<script src=js/"ie-compiled.js"></script>
+		<script src="js/ie-compiled.js"></script>
 	<![endif]-->
+
 </head>
 <body>
 	
-	<div class="wrapper">
-		<header class="header">
-			<div class="top-section">
-				<div class="container">
-					<div class="logo">indipixel</div>
-					
-					<div class="contact-us">contact US</div>
-				</div>
+	<header class="header">
+		<div class="top-section">
+			<div class="logo">
+				<img src="img/logo.jpg" alt="">
 			</div>
 			
-			<div class="container">
-				<div class="content">
-					<h1>
-						We design and build <br> beautiful web &amp; mobile apps
-					</h1>
-					<p>
-						You can design and create, and build the most wonderful place in the world. But it takes people to make the dream a reality. - Walt Disney
-					</p>
-					<a href="#" class="button">Know more</a>
-				</div>
+			<div class="btn-menu">
+				<span class="sandwich"></span><span>Menu</span>
 			</div>
 
-			<div class="mobile">
-				<div class="photo">
-					<img src="img/photo.jpg" alt="">
-				</div>
-			</div>
-		</header>
-
-		<div class="container">
-			<div class="lets-talk">
-				<h2>Lets Talk</h2>
-				<form>
-					<input type="text" placeholder="First Name" value="" name="fname">
-					<input type="text" placeholder="Last  Name" value="" name="lname" class="right">
-					<input type="email" placeholder="Email Address" value="" name="email">
-					<select name="s" class="select left">
-						<option value="1">1</option>
-						<option value="2">2</option>
-					</select>
-					<textarea name="message" placeholder="Type your query here"></textarea>
-					<button>send</button>
-				</form>
+			<div class="social">
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				</ul>
 			</div>
 		</div>
 
-		<footer class="footer">
-			<div class="container">
-				<div class="contact-mail">
-					<a href="mailto:contact@yourmail.com">contact@yourmail.com</a>
+		<div class="content">
+			<span>Need our help?</span>
+			<h1>Top Designers</h1>
+			<div class="button">Check us!</div>
+		</div>
+
+		<div class="bottom-arrow"><a href="#diagram">&gt;&gt;</a></div>
+	</header>
+
+	<nav class="menu">
+		<div class="menu-overlay">
+			<div class="menu-close"></div>
+		</div>
+
+		<ul class="list">
+			<li><a href="#">Menu 1</a></li>
+			<li><a href="#">Menu 2</a></li>
+			<li><a href="#">Menu 3</a></li>
+			<li><a href="#">Menu 4</a></li>
+			<li><a href="#">Menu 5</a></li>
+			<li><a href="#">Menu 6</a></li>
+			<li><a href="#">Menu 7</a></li>
+			<li><a href="#">Menu 8</a></li>
+		</ul>
+	</nav>
+
+	<div id="diagram">
+
+		<div class="item-1">
+			<div class="box-progress">
+				<div class="progress"
+					data-max      = "100"
+					data-start    = "0"
+					data-stop     = "50"
+					data-duration = "4000"
+					data-target   = "#progress1-num"
+				>
 				</div>
-				<div class="copyright">Copyright &copy; 2016</div>
+				
+				<div class="center-num">
+					<div id="progress1-num" class="num">0</div>
+					<div class="caption">Big projects</div>
+				</div>
 			</div>
-		</footer>
+
+			<div class="text">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+			</div>
+		</div>
+
+
+		<div class="item-2">
+			<div class="box-progress">
+				<div class="progress"
+					data-max      = "100"
+					data-start    = "0"
+					data-stop     = "35"
+					data-duration = "4000"
+					data-target   = "#progress2-num"
+				>
+				</div>
+
+				<div class="center-num">
+					<div id="progress2-num" class="num">0</div>
+					<div class="caption">CLIENTS</div>
+				</div>
+			</div>
+
+			<div class="text">
+				Ipsum dolor sit amet, consectetur adipisicing elit, sed incididunt!
+			</div>
+		</div>
+
+		<div class="item-3">
+			<div class="box-progress">
+				<div class="progress"
+					data-max      = "100"
+					data-start    = "0"
+					data-stop     = "80"
+					data-duration = "4000"
+					data-target   = "#progress3-num"
+				>
+				</div>
+
+				<div class="center-num">
+					<div id="progress3-num" class="num">0</div>
+					<div class="caption">MONTHS</div>
+				</div>
+			</div>
+
+			<div class="text">
+				Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+			</div>
+		</div>
+
 	</div>
+	
+	<section class="team">
+		<header class="title">
+			<div class="border">
+				<span>Meet us!</span>
+				<h2>Our team</h2>
+			</div>
+		</header>
+
+		<div class="team-items">
+			<div class="item">
+				<div class="text">
+					<h2>ADRIANNA</h2>
+					<h3>Senior Graphic Designer</h3>
+					<p>She is the graphic designer with 3 years of professional experience.</p>
+				</div>
+
+				<div class="photo">
+					<img src="img/team/1.jpg" alt="">
+				</div>
+			</div>
+			<div class="item">
+				<div class="text">
+					<h2>OLIVIA</h2>
+					<h3>Art Director</h3>
+					<p>She is the art director with 8 years of professional experience.</p>
+				</div>
+
+				<div class="photo">
+					<img src="img/team/2.jpg" alt="">
+				</div>
+			</div>
+			<div class="item">
+				<div class="text">
+					<h2>THOMAS</h2>
+					<h3>Software Engeneer</h3>
+					<p>He is the software engeneer with 5 years of professional experience.</p>
+				</div>
+
+				<div class="photo">
+					<img src="img/team/3.jpg" alt="">
+				</div>
+			</div>
+			<div class="item">
+				<div class="text">
+					<h2>TAYLOR</h2>
+					<h3>CEO</h3>
+					<p>She is the boss in here.</p>
+				</div>
+
+				<div class="photo">
+					<img src="img/team/4.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="portfolio">
+		<header class="title">
+			<div class="border">
+				<span>Check out our projects!</span>
+				<h2>Portfolio</h2>
+			</div>
+		</header>
+
+		<div class="items">
+			<div class="item"><a href="#">
+					<img src="img/portfolio/1.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/2.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/3.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/4.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/5.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/6.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/7.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/8.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/9.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/10.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/11.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/12.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/13.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/14.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/15.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/16.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/17.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/18.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/19.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/20.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+			<div class="item"><a href="#">
+					<img src="img/portfolio/21.jpg" alt="">
+					<div class="htext"><span>Our new project!</span></div>
+				</a></div>
+		</div>
+	</section>
+
+	<section class="brands">
+		<header class="title">
+			<div class="border">
+				<span>We working for</span>
+				<h2>Brands</h2>
+			</div>
+		</header>
+
+		<div class="brands-items">
+			<div class="row ornament">
+				<div class="box-items">
+					<div class="item">
+						<div class="inner-box">sda</div>
+					</div>
+					<div class="item">
+						<div class="inner-box"></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="box-items">
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/1.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/2.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/3.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/4.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/5.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/6.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/7.png" alt=""></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="box-items">
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/8.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/9.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/10.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/11.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/12.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/13.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/14.png" alt=""></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="box-items">
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/15.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/16.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/17.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/18.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/19.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/20.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/21.png" alt=""></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="box-items">
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/22.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/23.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/24.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/25.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/26.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/27.png" alt=""></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"><img src="img/brands/28.png" alt=""></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row ornament">
+				<div class="box-items">
+					<div class="item">
+						<div class="inner-box"></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"></div>
+					</div>
+					<div class="item">
+						<div class="inner-box"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer class="footer">
+		<div class="top-section">
+			<div class="items">
+				<div class="item">
+					<h2>OUR TEAM</h2>
+					<p>We are the best company in the entire world!</p>
+				</div>
+				<div class="item">
+					<h2>ABOUT</h2>
+					<p>We are the best company in the entire world!</p>
+				</div>
+				<div class="item">
+					<h2>CONTACT</h2>
+					<p>
+						<a href="mailto:adminl@mail.com">adminl@mail.com</a><br>
+						<a href="#">www.site.com</a><br>
+						<a href="tel:4812345679">tel. +48 123 456 79</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom-section">
+			<div class="copyright">Copiright &copy; 2016.</div>
+		</div>
+	</footer>
+
 
 	<script src="js/compiled.js"></script>
 	<script src="js/main.js"></script>

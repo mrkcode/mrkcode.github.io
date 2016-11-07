@@ -1,0 +1,396 @@
+.tour-type
+	min-height: 710px
+	color: #5f5f5f
+	position: relative
+	text-align: center
+
+	&::before
+		content: ''
+		display: block
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		background: url(../img/tour-type-bg.jpg) no-repeat bottom center
+		background-size: cover
+		opacity: .29
+
+	h2
+		font-size: 50px
+		margin-top: 100px
+		margin-bottom: 20px
+
+	p
+		width: 960 / 1200 * 100 + %
+		margin: 0 auto
+		font-size: 20px
+
+	.images
+		font-size: 0
+		padding-bottom: 55px
+
+		.item
+			position: relative
+			display: inline-block
+			margin-top: 55px
+			width: 255px
+			height: 255px
+			padding: 0 17px
+
+			img
+				display: block
+				width: 100%
+				height: 100%
+				border-radius: 50%
+
+			h3
+				font-size: 34px
+				line-height: 255px
+				color: #fff
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 2
+				width: 100%
+
+.deals
+	min-height: 880px
+	background: rgba(71,160,255, .85)
+	text-align: center
+	position: relative
+	color: #fff
+
+	&::before
+		content: ''
+		display: block
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background: url(../img/deals-bg.jpg) no-repeat top center
+		background-size: cover
+		z-index: -1
+
+	h2
+		padding-top: 115px
+		font-size: 50px
+	
+	.deal-items
+		padding:
+			top: 60px
+			bottom: 50px
+
+		.item
+			display: inline-block
+			width: 370px
+			height: 590px
+			padding: 13px
+			color: #5f5f5f
+
+			.item-box
+				background: #fff
+
+				img
+					display: block
+					max-width: 100%
+					max-height: 270px
+					margin: 0 auto
+
+				.price
+					width: 165px
+					height: 54px
+					background: #47a0ff
+					margin: -28px auto 0 auto
+					position: relative
+					z-index: 4
+					font-size: 37px
+					line-height: 54px
+					font-family: 'Big Noodle Titling', sans-serif
+					letter-spacing: 2px
+					color: #fff
+
+					span
+						font-size: 30px
+
+						.strike
+							display: inline
+							text-decoration: line-through
+
+				h3
+					font-size: 50px
+					line-height: 85px
+
+				p
+					margin: 0
+					padding: 0 35px
+					text-align: left
+
+				.button
+					margin: 35px 0
+					font-size: 16px
+					line-height: 55px
+					
+.trips
+	color: #5f5f5f
+
+	h2
+		font-size: 50px
+		line-height: 250px
+		text-align: center
+
+	.trips-items
+		.row
+			overflow: hidden
+
+		.item
+			position: relative
+			float: left
+			width: 33.26%
+			margin-right: .1%
+			margin-top: 1px
+			overflow: hidden
+			
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				z-index: 1
+				background: #000
+				opacity: .5
+				transition: opacity 500ms
+
+			&:hover::before
+					opacity: .8
+
+			&:nth-of-type(3n)
+				margin-right: 0
+
+			img
+				display: block
+				min-width: 100%
+				min-height: 100%
+
+			.layer-box
+				position: absolute
+				z-index: 2
+				width: 100%
+				height: 150px
+				margin-top: -25px
+				top: 50%
+				left: 0
+				color: #fff
+				text-align: center
+				transition: all .2s
+
+				h3
+					font-family: 'Open Sans', sans-serif
+					font-size: 26px
+
+				p
+					margin: 0
+					font-size: 15px
+
+				.button
+					margin-top: 30px
+					padding: 10px 36px
+					font-family: 'Open Sans', sans-serif
+					font-size: 14px
+					opacity: 0
+					transition: all .2s
+
+			&:hover
+				.layer-box
+					margin-top: -75px
+
+				.button
+					opacity: 1
+
+.news
+	h2
+		font-size: 50px
+		margin:
+			top: 95px
+			bottom: 45px
+		text-align: center
+
+	.container > p
+		font-size: 20px
+		margin: 0 auto
+		max-width: 955px
+		text-align: center
+
+	.news-items
+		padding:
+			top: 50px
+			bottom: 105px
+		text-align: center
+
+		.item
+			display: inline-block
+			width: 370px
+			padding: 12px
+
+			.item-box
+				padding: 10px
+				background: #fff
+				text-align: left
+
+				img
+					width: 100%
+				
+				.content-box
+					padding: 10px 10px 30px 10px
+					color: #5f5f5f
+
+					a
+						display: inline-block
+						margin:
+							top: 10px
+							bottom: 5px
+						font-size: 18px
+						font-weight: bold
+						color: #47a0ff
+						text-decoration: none
+						letter-spacing: 1px
+
+						&:hover
+							text-decoration: underline
+.luxury
+	position: relative
+	background: rgba(0, 0, 0, .47)
+	height: 690px
+	text-align: center
+	color: #fff
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: -1
+		background: url(../img/luxury-bg.jpg) no-repeat top center
+		background-size: cover
+
+	h2
+		font-size: 148px
+		padding-top: 190px
+		line-height: 148px
+		letter-spacing: 7px
+
+	h3
+		font-size: 50px
+		line-height: 50px
+		letter-spacing: 2px
+
+	.button
+		display: block
+		width: 155px
+		height: 155px
+		line-height: 155px
+		padding: 0
+		margin: 30px auto
+		text-align: center
+		border-radius: 50%
+
+.footer
+	background: #fff
+	
+	.top-section
+		overflow: hidden
+		padding-bottom: 100px
+	
+	.fl
+		width: 25%
+		float: left
+		box-sizing: border-box
+
+		h2
+			font-size: 30px
+			line-height: 30px
+			padding:
+				top: 85px
+				bottom: 45px
+
+		p
+			margin: 0
+
+		a
+			font-size: 15px
+			text-decoration: none
+			color: #353535
+
+			&:hover
+				text-decoration: underline
+
+	.llc
+		padding-left: 10px
+
+	.support
+		padding-left: 70px
+
+	.follow
+
+		.button
+			padding: 0
+			line-height: 45px
+			text-align: center
+			color: #fff
+			font-size: 16px
+			margin-right: 5px
+			width: 45px
+			height: 45px
+			border-radius: 50%
+
+			&:last-child
+				margin-right: 0
+
+	.sletter
+		form
+			position: relative
+			margin-right: 10px
+
+			input
+				width: 100%
+				border: none
+				outline: none
+				background: #f2f2f2
+				font-size: 13px
+				padding: 0
+				text-indent: 17px
+				height: 55px
+				border-radius: 5px
+				transition: background 200ms
+
+				&:focus
+					background: #e5e5e5
+
+			.button
+				position: absolute
+				top: 5px
+				right: 5px
+				height: 45px
+				padding: 10px
+				letter-spacing: 1px
+				cursor: pointer
+				border: none
+				outline: none
+	
+	.copyright
+		clear: both
+		height: 60px
+		line-height: 60px
+		font-size: 13px
+		border-top: 1px solid #d0d0d0
+
+		p
+			margin: 0 10px
+
+@import "media"

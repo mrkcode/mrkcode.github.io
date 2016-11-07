@@ -1,0 +1,1058 @@
+@import "bourbon"
+@import "vars"
+
+.about
+	padding-top: 110px
+	overflow: hidden
+	text-align: center
+
+	.text
+		display: inline-block
+		vertical-align: top
+		width: 455px
+		margin-right: 80px
+		text-align: left
+
+		h2
+			text-align: left
+			&::after
+				margin-left: 0
+
+		p
+			margin-bottom: 40px
+
+		.button
+			padding: 0 15px
+			line-height: 40px
+			border-radius: 5px
+			letter-spacing: 2px
+			font-family: 'Roboto Light', sans-serif
+
+	.image
+		display: inline-block
+		vertical-align: top
+
+.what-we-do
+	margin:
+		top: 120px
+		bottom: 90px
+	overflow: hidden
+
+	& > h2
+
+	& > p
+		padding: 0 20px 20px 20px
+
+.what-we-do-items
+	max-width: 1100px
+	margin: auto
+	text-align: center
+
+	.item
+		display: inline-block
+		max-width: 525px
+		margin: 
+			top: 30px
+			right: 30px
+		border: 3px solid #ebebeb
+		box-sizing: border-box
+		padding: 25px
+		overflow: hidden
+		border-radius: 10px
+		transition: background 250ms, border 250ms
+
+		.icon
+			float: left
+			width: 110px
+			height: 110px
+			margin-right: 25px
+			border-radius: 50%
+			font-size: 45px
+			text-align: center
+			line-height: 110px
+			background: $red
+			color: #fff
+			transition:  color 250ms, background 250ms
+
+			& > .fa-pencil-square-o
+				margin:
+					right: -10px
+					top: 6px
+
+		.text
+			text-align: left
+			margin-left: 135px
+			transition: color 250ms
+
+			h3
+				display: inline-block
+				margin-top: 15px
+				margin-bottom: 20px
+				font-size: 16px
+				text-align: left
+				color: inherit
+
+				&::after
+					margin:
+						top: 20px
+						left: 0
+					background: #d7d7d7
+					transition: background 250ms
+
+			p
+				padding-bottom: 10px
+
+		&:nth-child(2n)
+			margin-right: 0
+
+		&:hover
+			background: $red
+			border-color: $red
+
+			.icon
+				background: #fff
+				color: $red
+
+			.text
+				color: #fff
+
+				h3
+					&::after
+						background: #fff
+
+.stat
+	position: relative
+	min-height: 368px
+	padding:
+		top: 140px
+	box-sizing: border-box
+	overflow: hidden
+	background: rgba($red, .9)
+	
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: url(../img/stat-bg.jpg) no-repeat
+		background-size: cover
+		z-index: -1
+
+.stat-items
+	max-width: 1100px
+	margin: auto
+
+	.box-item
+		float: left
+		width: 25%
+		padding:
+			bottom: 40px
+		text-align: center
+
+		.item
+			font-family: 'Roboto Regular', sans-serif
+			display: inline-block
+			min-width: 180px
+			color: #fff
+			text-align: left
+
+			.top-line
+				font-size: 30px
+				margin-bottom: 30px
+
+				.fa
+					font-size: 40px
+					margin-right: 15px
+
+			h3
+				font-size: 16px
+				letter-spacing: 0
+				color: #fff
+				text-align: left
+
+				&::after
+					margin:
+						top: 20px
+						left: 0
+					background: #fff
+
+.steps
+	max-width: 1172px
+	margin: auto
+	padding: 90px 0 80px 0
+	text-align: center
+
+	h2
+
+.steps-items
+	position: relative
+
+	.item
+		position: relative
+		z-index: 2
+		max-width: 300px
+		display: inline-block
+		margin: 
+			top: 45px
+			right: 130px
+
+		.icon
+			width: 100px
+			height: 100px
+			display: inline-block
+			border: 3px solid #e6e6e6
+			border-radius: 50%
+			background: #f3f3f3
+			
+			i
+				display: inline-block
+				width: 88px
+				height: 88px
+				box-sizing: border-box
+				margin-top: 6px
+				border-radius: 50%
+				background: #e6e6e6
+				font-size: 45px
+				line-height: 88px
+				color: $red
+
+		&:nth-child(2) i
+			line-height: 1
+			text-align: left
+			padding:
+				top: 18px
+				left: 20px
+
+		&:nth-child(3)
+			margin-right: 0
+
+			i
+				line-height: 1
+				text-align: left
+				padding:
+					top: 23px
+					left: 22px
+
+		h3
+			margin: 
+				top: 25px
+				bottom: 25px
+			font-family: 'Roboto Regular', sans-serif
+			font-size: 16px
+			letter-spacing: 1px
+
+			&::after
+				display: none
+
+	&::before
+		content: ''
+		position: absolute
+		top: 98px
+		left: 0
+		right: 0
+		margin: auto
+		z-index: 1
+		width: 80%
+		height: 3px
+		background: #e6e6e6
+
+.our-work
+	padding: 
+		top: 85px
+	background: #ececec
+	overflow: hidden
+
+.our-work-items
+	margin: 
+		top: 65px
+
+	.item
+		position: relative
+		float: left
+		width: 33.3333%
+		height: 319px
+
+		img
+			display: block
+			min-width: 100%
+			min-height: 100%
+
+		.htext
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			text-align: center
+			opacity: 0
+			transition: opacity 300ms
+
+			&::before
+				content: ''
+				position: absolute
+				top: 15px
+				left: 15px
+				right: 15px
+				bottom: 15px
+				background: rgba($red, .8)
+
+			span
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				margin: auto
+				z-index: 1
+				width: 130px
+				height: 35px
+				line-height: 35px
+				border: 1px solid #fff
+				color: #fff
+				border-radius: 5px
+				vertical-align: middle
+
+			&:hover
+				opacity: 1
+
+.our-service
+	padding: 
+		top: 85px
+	background: #ececec
+
+.our-service-items
+	margin-top: 55px
+	background: $red
+	
+	.item
+		height: 335px
+		overflow: hidden
+
+		& > img
+			display: inline-block
+			vertical-align: top
+
+		.text
+			width: 40%
+			display: inline-block
+			vertical-align: top
+			color: #fff
+
+			h3
+				color: #fff
+				margin: 
+					bottom: 20px
+				text-align: left
+
+				&::after
+					margin:
+						top: 20px
+						left: 0
+					background: #d9c4c2
+
+		.text
+			margin: 
+				top: 95px
+				left: 100px
+
+		.text + img
+			float: right
+
+		img + .text
+			margin: 
+				left: 150px
+
+.create
+	position: relative
+	height: 390px
+	overflow: hidden
+	background: rgba(0, 0, 0, .8)
+	color: #fff
+	text-align: center
+
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: url(../img/create-bg.jpg) no-repeat
+		background-size: cover
+		z-index: -1
+
+	& > h2, & > h3
+		font-family: 'Roboto Light', sans-serif
+		color: #fff
+
+		&::after
+			display: none
+
+	h2
+		margin:
+			top: 105px
+			bottom: 25px
+		font-size: 30px
+
+	h3
+		font-size: 20px
+		margin-bottom: 40px
+		letter-spacing: 2px
+
+	.button
+		font-size: 16px
+		line-height: 50px
+		padding: 0 20px
+		border-radius: 5px
+		
+		&:hover
+			background: darken($red, 12)
+
+.portfolio
+	padding-top: 80px
+
+	p
+		padding-bottom: 70px
+
+.isotope-buttons
+	font-size: 16px
+	overflow: hidden
+	text-align: center
+	padding-bottom: 45px
+
+	li
+		display: inline-block
+		position: relative
+		margin: 20px 20px
+		cursor: pointer
+		color: #5d5c5c
+		transition: color 110ms
+
+		&::before
+			content: ''
+			display: block
+			width: 35px
+			height: 3px
+			position: absolute
+			bottom: -15px
+			left: 0
+			background: transparent
+			cursor: default
+			transition: background 250ms
+
+		&::after
+			content: '/'
+			position: relative
+			right: -23px
+			cursor: default
+
+		&:last-child::after
+			display: none
+
+		&:hover
+			color: #81868e
+
+	li.is-active
+		&::before
+			background: #898989
+
+.isotope-items
+	.item
+		position: relative
+		width: 16.6666%
+		overflow: hidden
+		/*float: left*/
+
+		&::after
+			content: ''
+			display: block
+			padding-bottom: 100%
+
+
+		img
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+
+		.htext
+			height: 70px
+			position: absolute
+			bottom: 50px
+			left: 30px
+			color: #fff
+			z-index: 2
+			transition: opacity 250ms
+			opacity: 0
+
+			h3
+				font-size: 20px
+				letter-spacing: 1px
+				color: #fff
+				margin: 0
+				text-align: left
+
+				&::after
+					display: none
+
+			.author
+				font-size: 16px
+				font-family: 'Roboto Light', sans-serif
+
+				&::after
+					content: ''
+					display: block
+					background: #c2c2c2
+					height: 2px
+					width: 35px
+					margin-top: 20px
+
+		&::before
+			content: ''
+			position: absolute
+			top: 20px
+			bottom: 20px
+			left: 20px
+			right: 20px
+			background: rgba($red, .8)
+			z-index: 1
+			transition: opacity 250ms
+			opacity: 0
+		
+		&:hover
+			&::before
+				opacity: 1
+
+			.htext
+				opacity: 1
+
+	.item--1-2
+		width: 33.3333%
+
+		.htext
+			bottom: 80px
+			left: 70px
+
+		&::after
+			padding-bottom: 50%
+
+	.item--2-2
+		width: 33.3333%
+
+		.htext
+			bottom: 80px
+			left: 70px
+
+.subscribe
+	position: relative
+	min-height: 306px
+	background: rgba($red, .8)
+	box-sizing: border-box
+	padding-top: 100px
+	padding-bottom: 100px
+	text-align: center
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: url(../img/subscribe-bg.jpg) no-repeat
+		background-size: cover
+		z-index: -1
+
+	.text
+		display: inline-block
+		margin: 0 60px
+		text-align: left
+		max-width: 430px
+		color: #fff
+
+		h2
+			font-size: 18px
+			color: #fff
+			margin-bottom: 10px
+			text-align: left
+			letter-spacing: 2px
+
+			&::after
+				height: 2px
+				margin-top: 15px
+				margin-left: 0
+				background: #fff
+
+		p
+			margin: 0
+			font-size: 13px
+			letter-spacing: 0
+
+	.mail-submit
+		display: inline-block
+		vertical-align: top
+		margin: 0 60px
+		position: relative
+		top: 20px
+		height: 40px
+		max-width: 405px
+		margin: 0 20px
+		border: 1px solid #fff
+
+		input[type="email"]
+			box-sizing: border-box
+			width: 100%
+			margin: auto
+			font-size: 14px
+			padding-top: 11px
+			padding-left: 20px
+			padding-right: 150px
+			border: none
+			outline: none
+			background: transparent
+			color: #fff
+			
+			&::-webkit-input-placeholder 
+				color: #fff
+
+			&:-moz-placeholder 
+				color: #fff
+
+			&::-moz-placeholder 
+				color: #fff
+
+			&:-ms-input-placeholder 
+				color: #fff
+
+		button
+			position: absolute
+			right: 0
+			top: 0
+			width: 130px
+			height: 40px
+			text-align: center
+			color: #fff
+			border: none
+			border-left: 1px solid #fff
+			outline: none
+			background: transparent
+			cursor: pointer
+			transition: background 100ms, color 100ms
+			font-size: 13px
+			font-family: 'Roboto Bold', sans-serif
+
+			&:hover
+				background: #fff
+				color: $red
+
+.our-crew
+	padding-top: 90px
+	padding-bottom: 70px
+
+.our-crew-items
+	text-align: center
+
+	.item
+		display: inline-block
+		margin:
+			left: 15px
+			right: 15px
+			top: 70px
+		width: 270px
+		text-align: center
+		
+		.photo
+			position: relative
+
+			img
+				width: 100%
+				display: block
+
+			.htext
+				position: absolute
+				bottom: 0
+				left: 0
+				height: 50%
+				box-sizing: border-box
+				padding: 25px
+				z-index: 1
+				color: #fff
+				transition: opacity 250ms
+				opacity: 0
+
+				&::before
+					content: ''
+					position: absolute
+					top: 0
+					left: 10px
+					right: 10px
+					bottom: 10px
+					background: $red
+					z-index: -1
+
+				p
+					font-family: 'Roboto Light', sans-serif
+					font-size: 11px
+					padding-bottom: 20px
+
+				.social
+
+					a
+						display: inline-block
+						margin: 0 5px
+						width: 27px
+						height: 27px
+						line-height: 27px
+						text-align: center
+						border: 1px solid #fff
+						border-radius: 50%
+						color: #fff
+						transition: transform 200ms
+						
+						.fa
+							font-size: 15px
+							margin-left: 2px
+
+						&:hover
+							transform: scale(1.2)
+
+		&:hover .htext
+			opacity: 1
+
+
+		h3
+			font-size: 17px
+			margin: 
+				top: 35px
+				bottom: 5px
+			letter-spacing: 2px
+
+			&::after
+				display: none
+
+		.position
+			font-size: 12px
+			color: #333b46
+
+#owl-slider
+	position: relative
+	height: 680px
+	background: rgba(#000, .8)
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: url(../img/owl-slider.jpg) no-repeat
+		background-size: cover
+		z-index: -1
+
+	.slide
+		height: 100%
+		padding-top: 90px
+		box-sizing: border-box
+		text-align: center
+		color: #fff
+
+		h2
+			font-size: 20px
+			color: #fff
+
+			&::after
+				background: #fff
+
+		h3
+			font-size: 18px
+			font-family: 'Open Sans', sans-serif
+			letter-spacing: 6px
+			color: #fff
+			margin-bottom: 40px
+
+			&::after
+				display: none
+
+		img
+			display: inline-block
+			width: 155px
+			height: 155px
+			border-radius: 50%
+			margin-bottom: 35px
+
+		p
+			max-width: 840px
+			margin: auto
+			padding: 0 20px
+			font-size: 16px
+			font-family: 'Open Sans Italic', sans-serif
+
+		.author
+			margin-top: 40px
+			font-size: 20px
+			font-family: 'Roboto Medium', sans-serif
+			letter-spacing: 4px
+			color: $red
+
+	.owl-wrapper-outer
+		height: 100%
+
+	.owl-wrapper
+		height: 100%
+
+	.owl-controls
+		position: relative
+		z-index: 1
+		margin-top: -100px
+
+		.owl-page
+			span
+				border: 1px solid $red
+				background: transparent
+
+			&.active
+				span
+					background: $red
+
+			&:hover
+				opacity: 1
+.lattest-blog
+	padding-top: 100px
+	background: #f3f3f3
+
+
+.lattest-blog-items
+	text-align: center
+
+	.item
+		width: 85%
+		max-width: 568px
+		height: 390px
+		overflow: hidden
+		display: inline-block
+		margin:
+			top: 80px
+			left: 15px
+			right: 15px
+
+		img
+			width: 50%
+			float: left
+
+		.text
+			width: 50%
+			height: 100%
+			box-sizing: border-box
+			padding: 25px
+			float: right
+			background: $red
+			text-align: left
+			color: #fff
+			font-size: 12px
+
+			h3
+				margin-top: 93px
+				margin-bottom: 0
+				font-size: 16px
+				text-align: left
+				color: #fff
+
+				&::after
+					display: none
+
+			.author
+				font-family: 'Roboto Light', sans-serif
+				font-size: 14px
+				margin-bottom: 15px
+			
+			hr
+				width: 30px
+				border: 0
+				height: 2px
+				background: #fff
+				color: #fff
+				margin-left: 0
+
+			p
+				margin-top: 25px
+				margin-bottom: 15px
+
+			.date
+				.fa
+					display: inline-block
+					font-size: 16px
+					padding-right: 10px
+
+.pricing-table
+	padding-top: 100px
+	padding-bottom: 30px
+	background: #f3f3f3
+
+.pricing-table-items
+	text-align: center
+
+	.item
+		margin:
+			top: 70px
+			left: 30px
+			right: 30px
+		display: inline-block
+		width: 85%
+		max-width: 320px
+		border-radius: 10px
+		border: 1px solid #d7d7d7
+		transition: box-shadow 200ms
+
+		h3
+			font-size: 20px
+			margin: 0
+			line-height: 80px
+			color: #81868e
+
+			&::after
+				display: none
+
+		ul
+			border-bottom: 1px solid #e1e1e1
+
+			li
+				border-top: 1px solid #e1e1e1
+				font-size: 13px
+				line-height: 40px
+
+				&:empty::before
+					content: 'X'
+					font-size: 20px
+
+		.button
+			line-height: 30px
+			border: 1px solid #cccccc
+			border-radius: 5px
+			padding: 0 30px
+			background: transparent
+			color: #81868e
+			margin: 25px 0
+			transition: background 250ms, color 250ms, border 250ms
+
+			&:hover
+				background: $red
+				color: #fff
+				border-color: $red
+
+		&:hover
+			box-shadow: 0 0 20px #c8c8c8
+
+			.button
+				background: $red
+				color: #fff
+				border-color: $red
+
+.callback
+	padding-top: 90px
+	padding-bottom: 80px
+	background: #f3f3f3
+	text-align: center
+
+	p
+		margin-bottom: 70px
+
+	form
+		display: inline-block
+		width: 570px
+		text-align: left
+
+		& input[type="text"], & input[type="email"], textarea
+			border: 2px solid #ebebeb
+			outline: none
+			background: transparent
+			transition: border 200ms
+			padding: 8px 15px
+			font-size: 14px
+			box-sizing: border-box
+			color: darken(#81868e, 30)
+
+			&::-webkit-input-placeholder 
+				color: #81868e
+				letter-spacing: 1px
+
+			&:-moz-placeholder 
+				color: #81868e
+				letter-spacing: 1px
+
+			&::-moz-placeholder 
+				color: #81868e
+				letter-spacing: 1px
+
+			&:-ms-input-placeholder 
+				color: #81868e
+				letter-spacing: 1px
+
+			&:focus
+				border: 2px solid #ced74c
+
+		& input[type="text"], & input[type="email"]
+			height: 40px
+			width: 270px
+		
+		input[type="email"]
+			float: right
+
+		textarea
+			resize: none
+			width: 100%
+			height: 220px
+			margin:
+				top: 20px
+				bottom: 0
+
+		.button
+			width: 270px
+			line-height: 45px
+			font-size: 14px
+			border: none
+			margin-top: 20px
+	
+	.contacts
+		max-width: 300px
+		display: inline-block
+		vertical-align: top
+		margin-top: 57px
+		margin-left: 65px
+		font-size: 14px
+		text-align: left
+		
+		li
+			position: relative
+			margin-bottom: 30px
+			padding:
+				top: 3px
+				left: 45px
+
+			a
+				color: #81868e
+				transition: color 200ms
+
+				&:hover
+					color: darken(#81868e, 20)
+
+			.fa
+				position: absolute
+				top: 0
+				left: 0
+				font-size: 30px
+				color: $red
+
+.footer
+	background: $red
+
+	.copyright
+		line-height: 80px
+		color: #fff
+		font-size: 15px
+		text-align: center
+
+@import "media"

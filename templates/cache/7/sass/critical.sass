@@ -1,0 +1,283 @@
+@import "bourbon"
+@import "variables"
+@import "fonts"
+
+html
+	min-width: 320px
+	position: relative
+	font-size: 16px
+	font-family: 'Merriweather Regular', sans-serif
+	background: #fff
+	color: $text-color
+
+h1, h2
+	font-family: 'Merriweather Light', sans-serif
+	font-size: rem(25px)
+	text-align: center
+
+	&::after
+		content: ''
+		display: block
+		width: 160px
+		height: 21px
+		margin-top: rem(20px)
+		margin-left: auto
+		margin-right: auto
+		background-image: url(../img/h-decor-bg.png)
+		background-repeat: no-repeat
+		background-position: bottom center
+
+h2
+	margin: 40px 0
+
+.header
+	height: 610px
+	background-color: #f3f3f3
+	background-image: url(../img/header-bg.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	
+	> .container,
+	> .container .row,
+	> .container .col-content
+		height: 100%
+
+	.menu
+		margin-top: 30px
+		margin-left: auto
+		margin-right: auto
+
+		ul
+			margin: 0
+			padding: 0
+			overflow: hidden
+
+		li
+			float: left
+			list-style: none
+
+		a
+			display: block
+			padding: rem(20px)
+			text-decoration: none
+			color: $text-color
+			font-size: rem(12px)
+			border: 1px solid transparent
+			transition: border 110ms ease
+
+			&:hover
+				border-color: #3c3c3c
+
+	.btn-mobile
+		display: none
+		float: right
+		margin-top: 30px
+		margin-right: 30px
+		font-size: rem(50px)
+		color: $text-color
+		transition: color 100ms ease
+
+		&:hover
+			color: lighten(#d34523, 11)
+	
+	h1
+		position: absolute
+		top: 50%
+		left: 20px
+		transform: translateY(-50%)
+		width: 357px
+		
+
+		&::after
+			margin-top: rem(30px)
+
+	@media only screen and (max-width : 992px)
+		background-position: -200px 0
+
+		.menu
+			position: fixed
+			top: 0
+			left: 0
+			margin: 0
+			width: 100%
+			height: 0
+			overflow: hidden
+			z-index: 10
+			background: rgba(0, 0, 0, 0.8)
+			transition: height 250ms
+
+			ul
+				height: auto
+				margin-top: 140px
+				margin-bottom: 140px
+
+				li
+					float: none
+
+					a
+						display: block
+						line-height: 98px
+						padding: 0 25px
+						margin: 10px
+						font-size: 25px
+						font-family: 'Open Sans Semibold', sans-serif
+						text-decoration: none
+						color: #fff
+						background: rgba(#2b8aff, .9)
+						border: none
+						border-radius: 10px
+						text-align: center
+						transition: background 150ms
+
+						&:hover
+							background: rgba(#0dd, .9)
+							color: #fff
+
+			.mob-overlay
+				height: 100%
+				width: 100%
+				position: absolute
+				top: 0
+				left: 0
+				z-index: -1
+
+				.close
+					position: relative
+					border-radius: 50%
+					border: 2px solid #ddd
+					height: 100px
+					width: 100px
+					margin: 20px auto
+					cursor: pointer
+					transition: border 250ms
+
+					&::before, &::after
+						content: ''
+						position: absolute
+						background: #fff
+						height: 2px
+						width: 80%
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						margin: auto
+						transition: background 250ms
+
+					&::before
+						transform: rotate(45deg)
+
+					&::after
+						transform: rotate(-45deg)
+
+				.close:hover
+					border: 2px solid red
+
+					&::before, &::after
+						background: #f00
+
+		.btn-mobile
+			display: block
+
+		h1
+			width: 320px
+			font-size: rem(22)
+			left: 50%
+			transform: translate(-50%, -50%)
+
+	@media only screen and (max-width : 768px)
+		background-image: none
+
+		h1
+			width: 320px
+			font-size: rem(22)
+			left: 50%
+			transform: translate(-50%, -50%)
+
+.active-mob-menu
+	overflow: hidden
+
+	.header
+		.menu
+			height: 100%
+			overflow: auto
+
+.info
+	min-height: 240px
+	padding-bottom: 20px
+	background-color: #f7cd12
+	text-align: center
+	
+	img
+		margin-top: 40px
+		margin-bottom: 20px
+
+	h2
+		margin: 0
+		font-size: 12px
+		text-transform: uppercase
+		font-family: 'Merriweather Bold', sans-serif
+
+	p
+		margin-top: 15px
+		font-size: rem(10px)
+
+.specials-items
+	padding-bottom: 60px
+
+	.item
+		float: left
+		width: 33.3333%
+		overflow: hidden
+		background: #f8f8f8
+		text-align: center
+
+		&::before
+			content: ''
+			float: left
+			padding-top: 100%
+
+	.cell
+		float: left
+		width: 50%
+		max-height: 50%
+		overflow: hidden
+
+		&::before
+			content: ''
+			float: left
+			padding-top: 100%
+	
+	.right
+		float: right
+
+	img
+		min-height: 100%
+		min-width: 100%
+
+	h3
+		font-size: rem(12px)
+		font-family: 'Merriweather Bold', sans-serif
+		line-height: 32px
+		margin-top: 40px
+		padding: 0 17px
+		color: #383838
+
+		&::after
+			content: ''
+			display: block
+			width: 55px
+			height: 1px
+			margin: 0 auto
+			background: #383838
+
+	p
+		margin: 17px
+		font-family: 'Merriweather Light', sans-serif
+		font-size: rem(10px)
+		color: #3c3c3c
+
+	.price
+		color: #383838
+		font-family: 'Merriweather Bold', sans-serif
+		margin: 0 17px

@@ -1,0 +1,625 @@
+@import "bourbon"
+
+input[type=search]
+	-webkit-appearance: textfield
+	-webkit-box-sizing: content-box
+	font-family: inherit
+	font-size: 100%
+
+*::-webkit-input-placeholder 
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder 
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder 
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder 
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid 
+
+body input:required:valid,
+body textarea:required:valid 
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button
+	display: none
+
+body
+	min-width: 320px;
+	position: relative;
+	font-family: 'Open Sans', sans-serif
+	font-size: 16px;
+	line-height: 1.6;
+	background: #fff
+	margin: 0
+	color: #000
+
+h1, h2, h3, h4, p, ul
+	padding: 0
+	margin: 0
+
+h1, h2, h3, h4
+	font-weight: normal
+	font-size: 100%
+
+h2
+		line-height: 1
+		font-size: 30px
+		font-family: 'Trebuchet MS', sans-serif
+		color: #41525c
+		text-transform: uppercase
+
+li
+	list-style: none
+
+img
+	border: none
+
+a
+	text-decoration: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+$blue: #3070a8
+$gray: #989898
+$green: #00b89a
+
+body.active-mob-menu
+	overflow: hidden
+
+	.menu
+		height: 100%
+		overflow: auto
+
+.header
+	.top-section
+		height: 115px
+
+	.logo
+		float: left
+		font-size: 36px
+		color: #ee8129
+		font-family: 'Poiret One Regular', sans-serif
+		line-height: 115px
+
+		span
+			color: $blue
+			font-family: 'Futura Md BT Bold', sans-serif
+
+	.menu
+		float: right
+
+		ul
+			height: 100%
+
+			li
+				float: left
+
+				a
+					display: block
+					line-height: 98px
+					padding: 17px 25px 0 25px
+					font-size: 14px
+					font-family: 'Open Sans Semibold', sans-serif
+					text-decoration: none
+					color: $gray
+					border-bottom: 3px solid transparent
+					transition: color 250ms, border 250ms
+
+					&:hover
+						color: $blue
+						border-bottom-color: $blue
+
+	.btn-mobile
+		float: right
+		position: relative
+		display: inline-block
+		display: none
+		padding-left: 65px
+		height: 40px
+		line-height: 40px
+		margin-top: 37px
+		cursor: pointer
+		font-family: 'Open Sans Semibold', sans-serif
+		text-transform: uppercase
+
+		&::before, &::after
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+
+		&::before
+			width: 50px
+			height: 40px
+			background: linear-gradient(to bottom, #000 10%, transparent 10%, transparent 45%, #000 45%, #000 55%, transparent 55%, transparent 90%, #000 90%)
+
+		&:hover
+			color: lighten($blue, 11)
+
+			&::before
+				background: linear-gradient(to bottom, lighten($blue, 11) 10%, transparent 10%, transparent 45%, lighten($blue, 11) 45%, lighten($blue, 11) 55%, transparent 55%, transparent 90%, lighten($blue, 11) 90%)
+
+
+	.content
+		clear: both
+		position: relative
+		height: 586px
+		background: #325677 url(../img/header-bg.jpg) no-repeat top center
+		background-size: cover
+		color: #fff
+
+		.box
+			max-width: 880px
+			margin: 0 auto
+			position: relative
+			top: 25.5972%
+			height: 330px
+			text-align: center
+
+		h1
+			font-size: 48px
+			font-family: 'Futura Md BT Bold', sans-serif
+			text-transform: uppercase
+			line-height: 1.2
+
+			span
+				font-size: 36px
+				font-family: 'Futura Book', sans-serif
+				text-transform: none
+
+		p
+			max-width: 585px
+			margin: 10px auto
+			font-size: 20px
+			font-family: Calibri, sans-serif
+			font-style: italic
+
+		.button
+			display: inline-block
+			line-height: 55px
+			font-family: 'Open Sans Semibold', sans-serif
+			text-transform: uppercase
+			border: 1px solid #fff
+			border-radius: 2px
+			padding: 0 60px
+			color: #fff
+			text-decoration: none
+			margin-top: 15px
+			transition: all 250ms
+
+			&:hover
+				box-shadow: 0px 0px 100px #ee8129
+				border-color: #ee8129
+
+.box-1
+	text-align: center
+	padding-bottom: 50px
+	
+	h2
+		margin-top: 65px
+
+	.box-1-items
+
+		.item
+			display: inline-block
+			width: 320px
+			margin: 70px 25px 0 25px
+
+			.icon
+				width: 140px
+				height: 140px
+				display: inline-block
+				background: $blue url(../img/sprite-1.png) no-repeat
+				border-radius: 50%
+
+			&.protect .icon
+				background-position: 0 0
+
+			&.alert .icon
+				background-position: -140px 0
+
+			&.detect .icon
+				background-position: -280px 0
+
+			h3
+				font-size: 30px
+				text-transform: uppercase
+				line-height: 80px
+				font-family: 'Futura Book', sans-serif
+				letter-spacing: 2px
+				color: $blue
+
+			p
+				font-size: 14px
+				color: #999999
+
+.box-2
+	min-height: 577px
+	background: url(../img/box-2-bg.jpg) no-repeat
+	background-size: cover
+	
+	h2
+		margin-top: 85px
+		font-size: 26px
+		font-family: 'Futura Book', sans-serif
+		line-height: 2
+		color: #ee8129
+
+	p
+		font-size: 19px
+		font-family: 'Open Sans Italic', sans-serif
+		color: #fff
+
+	ul
+		margin-top:  35px
+
+		li
+			position: relative
+			padding-left: 40px
+			font-size: 14px
+			line-height: 30px
+			color: #9d9d9d
+
+			&::before
+				content: ''
+				position: absolute
+				top: 11px
+				left: 18px
+				width: 8px
+				height: 8px
+				background: #9d9d9d
+				border-radius: 50%
+
+			&.blue
+				color: $blue
+
+				&::before
+					background: $blue
+
+
+	.inner
+		max-width: 680px
+
+.box-3
+	text-align: center
+
+	h2
+		margin-top: 70px
+		font-size: 26px
+
+.box-3-items
+	min-height: 600px
+
+	.item
+		position: relative
+		display: inline-block
+		width: 290px
+		margin-top: 70px
+		border: 1px solid #f5f5f5
+		background: #fff
+		border-radius: 5px
+		overflow: hidden
+		transition: border 250ms, margin 250ms, transform 250ms
+		vertical-align: top
+
+		h3
+			font-size: 24px
+			line-height: 60px
+			font-family: 'Futura Md BT Bold', sans-serif
+			text-transform: uppercase
+			color: #fff
+			letter-spacing: 1px
+			transition: line-height 250ms
+
+		h4
+			font-size: 24px
+			padding-top: 15px
+			padding-bottom: 10px
+			font-family: 'Futura Book', sans-serif
+			text-transform: uppercase
+			color: #3f4042
+			letter-spacing: 1px
+
+		.price
+			font-family: 'Futura Md BT Bold', sans-serif
+			font-size: 72px
+			line-height: 1
+			color: #35495a
+			
+			span
+				display: inline-block
+				vertical-align: top
+				line-height: 1
+
+				&:nth-child(1)
+					font-size: 36px
+
+				&:nth-child(2)
+					letter-spacing: -1px
+
+				&:nth-child(3)
+					margin-left: -5px
+					font-size: 18px
+					font-family: 'Futura Book', sans-serif
+					vertical-align: -10px
+		ul
+			padding:
+				top: 35px
+				left: 15px
+				right: 15px
+
+			li
+				line-height: 35px
+				color: #888c94
+				font-size: 15px
+				text-align: left
+				padding-left: 60px
+				margin-top: 1px
+				background-color: #f5f5f6
+				background: #f5f5f6 url(../img/check.png) no-repeat 32px 10px
+
+			li:nth-child(2n+1)
+				background-color: #e8f2fb
+
+		.button
+			display: block
+			line-height: 35px
+			font-family: 'Open Sans Semibold', sans-serif
+			text-transform: uppercase
+			letter-spacing: 1px
+			background: #3070a8
+			border-bottom: 2px solid darken(#3070a8, 10)
+			border-radius: 5px
+			color: #fff
+			text-decoration: none
+			margin:
+				top: 18px
+				left: 15px
+				right: 15px
+				bottom: 20px
+			transition: all 250ms
+
+		&:hover
+			transform: scale(1.06)
+			z-index: 2
+
+			h3
+				line-height: 67px
+
+	.blue
+		h3
+			background: #2bc2d5
+
+		&:hover
+			border: 3px solid #2bc2d5
+
+			.button
+				background: #2bc2d5
+				border-bottom: 2px solid darken(#2bc2d5, 10)
+	
+	.orange
+		h3
+			background: #ee8129
+
+		&:hover
+			border: 3px solid #ee8129
+
+			.button
+				background: #ee8129
+				border-bottom: 2px solid darken(#ee8129, 10)
+
+	.green
+		h3
+			background: #00b89a
+
+		&:hover
+			border: 3px solid #00b89a
+
+			.button
+				background: #00b89a
+				border-bottom: 2px solid darken(#00b89a, 10)
+
+.box-4
+	min-height: 315px
+	background: #111 url(../img/box-4-bg.jpg) no-repeat
+	background-size: cover
+
+	h2
+		font-size: 40px
+		font-family: 'Futura Md BT Bold', sans-serif
+		color: $blue
+		letter-spacing: 1px
+		padding-top: 50px
+		text-align: center
+
+		span	
+			font-family: 'Futura Book', sans-serif
+			color: #ee8129
+
+.box-4-items
+	padding-bottom: 50px
+
+	.item
+		float: left
+		width: 50%
+		box-sizing: border-box
+		padding-right: 20px
+		margin-top: 45px
+		overflow: hidden
+
+		.photo
+			float: left
+			width: 100px
+			height: 100px
+
+			img
+				display: block
+				max-width: 100px
+				max-height: 100px
+
+		.text
+			margin: 
+				left: 100px
+			min-height: 100px
+			padding: 
+				left: 25px
+			font-size: 13px
+
+			.inner-box
+				position: relative
+				height: 100%
+				background: #f7f7f7
+				padding: 
+					left: 15px
+					right: 15px
+
+				&::before
+					content: ''
+					position: absolute
+					top: 0
+					bottom: 0
+					left: -24px
+					margin: auto
+					width: 0
+					height: 0
+					border: 12px solid transparent
+					border-right-color: #f7f7f7
+
+			.title
+				line-height: 35px
+				font-family: 'Open Sans Semibold Italic', sans-serif
+				border-bottom: 1px dotted #666666
+				color: $blue
+
+				span
+					float: right
+			
+			p
+				padding:
+					top: 6px
+					bottom: 6px
+				color: #666666
+				line-height: 1.7
+
+		&:nth-child(2n)
+			padding:
+				left: 20px
+				right: 0
+
+.box-5
+	height: 345px
+	position: relative
+	padding-top: 30px
+	
+	.contact
+		width: 50%
+
+		ul
+			li
+				position: relative
+				margin-top: 10px
+				padding-left: 60px
+				line-height: 30px
+				font-size: 14px
+				font-family: 'Open Sans Semibold', sans-serif
+				color: #666
+
+				&::before
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					height: 100%
+
+			li.address
+				&::before
+					width: 23px
+					background: url(../img/sprite-2.png) no-repeat 0 0
+
+			li.phone
+				&::before
+					width: 18px
+					left: 2px
+					background: url(../img/sprite-2.png) no-repeat -23px 3px 
+
+			li.mail
+				&::before
+					width: 25px
+					background: url(../img/sprite-2.png) no-repeat -41px 3px 
+
+			li a
+				color: #666
+				text-decoration: underline
+				transition: color 250ms
+
+				&:hover
+					color: $blue
+					text-decoration: none
+
+	.social
+		ul
+			padding-top: 25px
+
+			li
+				display: inline-block
+				padding: 
+					left: 20px
+
+				a
+					display: block
+					height: 47px
+					width: 47px
+					border-radius: 50%
+					transition: transform 150ms
+
+					&:hover
+						transform: scale(1.1)
+
+				a.fc
+					background: url(../img/sprite-social.png) no-repeat -97px 1px
+
+				a.tw
+					background: url(../img/sprite-social.png) no-repeat -48px 1px
+
+				a.in
+					background: url(../img/sprite-social.png) no-repeat 
+
+			li:first-child
+				padding-left: 0
+
+	.map-box
+		width: 50%
+		height: 100%
+		position: absolute
+		top: 0
+		right: 0
+		z-index: 1
+
+	#map
+		height: 100%
+
+.footer
+	background: $blue
+	color: #fff
+
+	.copyright
+		text-align: center
+		font-size: 14px
+		line-height: 60px
+
+
+
+@import "media"

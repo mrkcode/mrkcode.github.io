@@ -1,0 +1,483 @@
+@charset "UTF-8";
+section > h2 {
+  text-align: center;
+  margin-top: 110px;
+  margin-bottom: 20px;
+}
+
+section > h2 + p {
+  margin-top: 0;
+  margin-bottom: 110px;
+  color: #999;
+  text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  section > h2 {
+    margin-top: 50px;
+    font-size: 30px;
+  }
+  section > h2 + p {
+    margin-bottom: 50px;
+  }
+}
+
+.feature img {
+  float: left;
+}
+
+.feature h3 {
+  margin: 0;
+  margin-left: 100px;
+  color: #353854;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: none;
+}
+
+.feature p {
+  margin-left: 100px;
+  color: #aeaeae;
+  line-height: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .feature h3 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .feature {
+    margin-top: 40px;
+  }
+  .feature:first-child {
+    margin-top: 0;
+  }
+}
+
+.slider {
+  margin-top: -50px;
+}
+
+.slider .slick-track {
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.slider .slick-prev {
+  z-index: 1;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.slider .slick-prev::before {
+  content: "\f104";
+  font-family: 'FontAwesome';
+  color: #c3cfe5;
+  font-size: 100px;
+}
+
+.slider .slick-next {
+  z-index: 1;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.slider .slick-next::before {
+  content: "\f105";
+  font-family: 'FontAwesome';
+  color: #c3cfe5;
+  font-size: 100px;
+}
+
+.slider .slick-slide {
+  opacity: 0;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.slider .slick-slide.slick-active {
+  opacity: 1;
+}
+
+.slider .item.slick-center {
+  position: relative;
+  z-index: 1;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.slider .item img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 20px 30px #bbb;
+  box-shadow: 0px 20px 30px #bbb;
+}
+
+.slider .slick-active img {
+  position: relative;
+  right: -100px;
+}
+
+.slider .slick-active + .slick-center img {
+  position: relative;
+  right: auto;
+}
+
+.slider .slick-active + .slick-center + .slick-active img {
+  left: -100px;
+  right: auto;
+}
+
+.slider .slick-list {
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .slider .slick-active img {
+    position: static;
+  }
+}
+
+#screenshots {
+  padding-bottom: 30px;
+}
+
+#screenshots .icon {
+  margin-top: 125px;
+}
+
+#screenshots h3 {
+  margin: 35px 0;
+}
+
+#screenshots p {
+  margin-bottom: 45px;
+}
+
+#screenshots .info {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 0 10px 10px;
+  overflow: hidden;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+#screenshots .info li {
+  float: left;
+  width: 60px;
+  height: 60px;
+  list-style: none;
+  line-height: 60px;
+  background-color: #fff;
+  color: #c3cfe5;
+  font-size: 16px;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-right: -10px;
+  -webkit-box-shadow: 7px 0 10px #ccc;
+  box-shadow: 7px 0 10px #ccc;
+  z-index: 1;
+  position: relative;
+}
+
+@media only screen and (max-width: 921px) {
+  #screenshots {
+    text-align: center;
+  }
+  #screenshots .icon {
+    margin-top: 45px;
+  }
+}
+
+.screenshot {
+  padding: 50px 0;
+  position: relative;
+}
+
+.screenshot .phone {
+  width: 290px;
+  height: 605px;
+  margin-left: 90px;
+  background-image: url("../img/screen-phone.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: auto auto;
+  text-align: left;
+}
+
+.screenshot .phone img {
+  margin-top: 58px;
+  margin-left: 15px;
+}
+
+.screenshot .circle {
+  position: absolute;
+  z-index: 1;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.screenshot .circle.name {
+  top: 210px;
+  left: 335px;
+  background-color: #fcec64;
+  font-size: 18px;
+}
+
+.screenshot .circle.num {
+  top: 435px;
+  left: 26px;
+  background-color: #6ca3ff;
+  font-size: 30px;
+}
+
+.screenshot::before {
+  content: '';
+  position: absolute;
+  right: 82px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.screenshot.cloudy .circle.name {
+  background-color: #fcec64;
+}
+
+.screenshot.cloudy .circle.num {
+  background-color: #6ca3ff;
+}
+
+.screenshot.cloudy::before {
+  background-image: url("../img/screenshots/cloudy-bg.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto auto;
+}
+
+.screenshot.sunny .circle.name {
+  background-color: #f2a14e;
+}
+
+.screenshot.sunny .circle.num {
+  background-color: #fc6a42;
+}
+
+.screenshot.sunny::before {
+  background-image: url("../img/screenshots/sunny-bg.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto auto;
+}
+
+.screenshot.rainy .circle.name {
+  background-color: #b8faee;
+}
+
+.screenshot.rainy .circle.num {
+  background-color: #7693c8;
+}
+
+.screenshot.rainy::before {
+  background-image: url("../img/screenshots/rainy-bg.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto auto;
+}
+
+@media only screen and (max-width: 921px) {
+  .screenshot .phone {
+    display: inline-block;
+    margin-left: 0;
+  }
+  .screenshot .circle {
+    display: none;
+  }
+  .screenshot.cloudy::before {
+    display: none;
+  }
+}
+
+#reviews {
+  font-size: 24px;
+}
+
+#reviews blockquote {
+  position: relative;
+  margin: 0;
+  padding: 40px 0;
+}
+
+#reviews blockquote::before, #reviews blockquote::after {
+  position: absolute;
+  display: block;
+  font-size: 142px;
+  color: #648cff;
+}
+
+#reviews blockquote::before {
+  content: '“';
+  top: -37px;
+}
+
+#reviews blockquote::after {
+  content: '“';
+  bottom: -7px;
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+#reviews cite {
+  font-size: 18px;
+  font-style: normal;
+}
+
+#reviews .rev-line {
+  margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 991px) {
+  #reviews .rev-line {
+    margin-bottom: 0;
+  }
+}
+
+#download {
+  position: relative;
+  background: #648cff;
+  height: 460px;
+  color: #fff;
+}
+
+#download::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 50%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url("../img/download-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: auto auto;
+}
+
+#download h2 {
+  margin-top: 120px;
+  color: #fff;
+}
+
+#download p {
+  max-width: 360px;
+}
+
+#download .container {
+  position: relative;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 480px) {
+  #download h2 {
+    margin-top: 40px;
+  }
+}
+
+footer {
+  background-color: #353854;
+}
+
+footer a {
+  color: #b5b5c8;
+}
+
+footer .logo {
+  color: #648cff;
+}
+
+footer .logo span {
+  color: #fc6a42;
+}
+
+footer .menu a {
+  color: #b5b5c8;
+}
+
+footer .btn-mobile {
+  margin-right: 10px;
+}
+
+footer .top-line {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+footer .copyright {
+  color: #565b87;
+  text-align: right;
+  padding-top: 45px;
+  padding-bottom: 80px;
+}
+
+footer hr {
+  width: auto;
+  max-width: 1590px;
+  margin: 0 auto;
+  border-top: 1px solid #434769;
+}
+
+@media only screen and (max-width: 768px) {
+  footer .copyright {
+    text-align: center;
+  }
+}
+
+.scroll-top, .scroll-top:link, .scroll-top:visited {
+  color: #b3b3c6;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  background-color: #434769;
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 28px;
+  -webkit-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+}
+
+.scroll-top:hover, .scroll-top:link:hover, .scroll-top:visited:hover {
+  color: #b3b3c6;
+}
+
+@media only screen and (max-width: 768px) {
+  .scroll-top, .scroll-top:link, .scroll-top:visited {
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+}

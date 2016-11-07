@@ -30,7 +30,9 @@ gulp.task('sass', function(){
 gulp.task('compileJs', function(){
 	gulp.src([
 		'libs/jquery/dist/jquery.min.js',
-		'libs/fancyselect/fancySelect.js'
+		'libs/waypoints/lib/jquery.waypoints.min.js',
+		'libs/smooth-scroll/smooth-scroll.js',
+		'js/circle-progress-bar.jquery.js'
 	])
 	.pipe(concat('compiled.js'))
 	//.pipe(uglify())

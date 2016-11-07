@@ -1,0 +1,167 @@
+/*==========  Desktop First Method  ==========*/
+
+@media only screen and (max-width : 1024px)
+	.box-4-items
+		.item
+			float: none
+			width: 100%
+			padding:
+				right: 0
+
+		.item:nth-child(2n)
+			padding:
+				left: 0
+
+@media only screen and (max-width : 992px)
+	.header
+		.menu
+			ul
+				li
+					a
+						padding: 17px 10px 0 10px
+
+@media only screen and (max-width : 768px)
+	.header
+		.menu
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			height: 0
+			z-index: 5
+			overflow: hidden
+			transition: height 250ms
+
+			ul
+				height: auto
+				margin-top: 140px
+
+				li
+					float: none
+
+					a
+						display: block
+						line-height: 98px
+						padding: 0 25px
+						margin: 10px
+						font-size: 25px
+						font-family: 'Open Sans Semibold', sans-serif
+						text-decoration: none
+						color: #fff
+						background: rgba($blue, .9)
+						border: none
+						border-radius: 10px
+						text-align: center
+						transition: background 150ms
+
+						&:hover
+							background: rgba($green, .9)
+
+			.mob-overlay
+				height: 100%
+				width: 100%
+				position: absolute
+				top: 0
+				left: 0
+				z-index: -1
+				background: rgba(0, 0, 0, 0.8)
+
+				.close
+					position: relative
+					border-radius: 50%
+					border: 2px solid #ddd
+					height: 100px
+					width: 100px
+					margin: 20px auto
+					cursor: pointer
+					transition: border 250ms
+
+					&::before, &::after
+						content: ''
+						position: absolute
+						background: #fff
+						height: 2px
+						width: 80%
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						margin: auto
+						transition: background 250ms
+
+					&::before
+						transform: rotate(45deg)
+
+					&::after
+						transform: rotate(-45deg)
+
+				.close:hover
+					border: 2px solid red
+
+					&::before, &::after
+						background: #f00
+
+		.btn-mobile
+			display: inline-block
+
+		.content
+
+			h1
+				font-size: 28px
+
+				span
+					font-size: 16px
+					
+			p
+				font-size: 16px
+
+			.button
+				line-height: 35px
+
+@media only screen and (max-width : 480px)
+	.header
+		.top-section
+			height: auto
+
+		.logo
+			float: none
+			line-height: 80px
+			text-align: center
+		
+		.menu
+			float: none
+			text-align: center
+
+		.btn-mobile
+			margin-top: 10px
+			margin-bottom: 20px
+
+	.box-1
+		.box-1-items
+			.item
+				width: 270px
+	.box-5
+		.map-box
+			display: none
+	
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+@media only screen and (min-width : 320px)
+	/**/
+
+
+@media only screen and (min-width : 480px)
+	/**/
+
+@media only screen and (min-width : 768px)
+	/**/
+
+@media only screen and (min-width : 992px)
+	/**/
+
+@media only screen and (min-width : 1200px)
+	/**/
